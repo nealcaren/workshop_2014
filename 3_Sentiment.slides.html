@@ -1734,143 +1734,49 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="neal-caren">Neal Caren</h3>
-<p>Department of Sociology<br />University of North Carolina, Chapel Hill<br />neal.caren@gmail.com<br /><span class="citation">@haphazardsoc</span></p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Winning makes us happy.<br /><img src="fb.png" /><br />by Sean J. Taylor (<span class="citation">@seanjtaylor</span>)</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Yelp can tell us how SES structures food options.</p>
-<p><img src="files\high_ses.png" /> <img src="files\mid_ses.png" /> <img src="files\low_ses.png" /></p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Or map who supports secession</p>
 <div class="figure">
-<img src="files\petitions.png" />
+<img src="blank.png" />
 </div>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="goals-for-today">Goals for today</h3>
-<p>Understand text collection and analysis in Python</p>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>well enough so that you can Google your problems, find the answer, and implement it.</p>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="more-specifically">More specifically</h4>
-<ol style="list-style-type: decimal">
-<li>Up and running with IPython (1_Into)</li>
-<li>Understand a basic workflow (2_Twitter)</li>
-<li>Basics of Python and sentiment analysis (3_Sentiment)</li>
-<li>Collecting data from a website (4_Upworthy)</li>
-<li>Collecting data from an API (5_Times)</li>
-<li>Basic text ML with scikit-learn (6_classification)</li>
-</ol>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="why-python">Why Python</h4>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="figure">
-<img src="Stanford.jpg" />
-</div>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="setup">Setup</h4>
-<p>On your computer</p>
-<ul>
-<li><a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a></li>
-<li><a href="https://www.enthought.com/products/epd/">Enthought</a></li>
-<li><a href="http://www.python.org">Python</a></li>
-</ul>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On the internet</p>
-<ul>
-<li><a href="https://wakari.io">Wakari</a></li>
-</ul>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="slides-and-code-for-today">Slides and Code for Today</h4>
-<p>Links to get them on the internet</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="getting-yourself-setup">Getting yourself setup</h4>
-<p>On a Mac</p>
-<div class="figure">
-<img src="on_a_mac.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On Windows</p>
-<div class="figure">
-<img src="windows.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ipython-notebooks-are-what-all-the-cool-kids-use.">Ipython Notebooks are what all the cool kids use.</h4>
-<div class="figure">
-<img src="first_screen.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="a-new-notebook">A new notebook</h4>
-<div class="figure">
-<img src="new_workbook.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Cells can be Markdown (like this one) or code</p>
-<div class="figure">
-<img src="files\cell_types.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="to-start-off-with">To start off with</h4>
-<p>Make sure you hit <code>Shift-Enter</code> or <code>Ctrl-Enter</code> when you are done.</p>
+<h4 id="data-types">Data types</h4>
+<p>Strings</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[1]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<div class="highlight"><pre><span class="n">tweet</span> <span class="o">=</span> <span class="s">&#39;We have some delightful new food in the cafeteria. Awesome!!!&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Open a note book and copy this text over.</p>
+<p>Then press <code>shift-enter</code> or select <code>Cell-Run</code> from the pull down menu to <code>run</code> it.</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What's in there?</p>
+<p>In a new cell, type <code>tweet</code> and then run the cell</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">tweet</span>
 </pre></div>
 
 </div>
@@ -1881,12 +1787,1581 @@ In&nbsp;[3]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
+    Out[2]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
-4
+&apos;We have some delightful new food in the cafeteria. Awesome!!!&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also <code>print</code> out the contents.</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">tweet</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+We have some delightful new food in the cafeteria. Awesome!!!
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python doesn't care if you use <code>'</code>, <code>&quot;</code>, or even <code>'''</code> for your strings.</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">tweet</span> <span class="o">=</span> <span class="s">&quot;We have some delightful new food in the cafeteria. Awesome!!!&quot;</span>
+<span class="n">tweet</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;We have some delightful new food in the cafeteria. Awesome!!!&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Will this work?</p>
+<p><code>tweet = Does anyone call New Haven &quot;NeHa&quot;?</code></p>
+<p>Guess? Try it!</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">tweet</span> <span class="o">=</span> <span class="n">Does</span> <span class="n">anyone</span> <span class="n">call</span> <span class="n">New</span> <span class="n">Haven</span> <span class="s">&quot;NeHa&quot;</span><span class="err">?</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_pyerr">
+<pre>
+<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-5-053a43dc44ba&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">1</span>
+<span class="ansired">    tweet = Does anyone call New Haven &quot;NeHa&quot;?</span>
+                      ^
+<span class="ansired">SyntaxError</span><span class="ansired">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">tweet</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;Does anyone call New Haven &quot;NeHa&quot;?&#39;&#39;&#39;</span>
+
+<span class="k">print</span> <span class="n">tweet</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Does anyone call New Haven &quot;NeHa&quot;?
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">tweet</span> <span class="o">=</span> <span class="s">&#39;Does anyone call New Haven &quot;NeHa&quot;?&#39;</span>
+
+<span class="k">print</span> <span class="n">tweet</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Does anyone call New Haven &quot;NeHa&quot;?
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lists</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="p">[</span><span class="s">&#39;everything&#39;</span><span class="p">,</span><span class="s">&#39;in&#39;</span><span class="p">,</span><span class="s">&#39;brackets&#39;</span><span class="p">,</span><span class="s">&#39;separated&#39;</span><span class="p">,</span><span class="s">&#39;by&#39;</span><span class="p">,</span><span class="s">&#39;commas.&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[8]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+[&apos;everything&apos;, &apos;in&apos;, &apos;brackets&apos;, &apos;separated&apos;, &apos;by&apos;, &apos;commas.&apos;]
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Thing of these like a variable.</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">positive_words</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;awesome&#39;</span><span class="p">,</span> <span class="s">&#39;good&#39;</span><span class="p">,</span> <span class="s">&#39;nice&#39;</span><span class="p">,</span> <span class="s">&#39;super&#39;</span><span class="p">,</span> <span class="s">&#39;fun&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">positive_words</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;awesome&apos;, &apos;good&apos;, &apos;nice&apos;, &apos;super&apos;, &apos;fun&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">positive_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;delightful&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">positive_words</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;awesome&apos;, &apos;good&apos;, &apos;nice&apos;, &apos;super&apos;, &apos;fun&apos;, &apos;delightful&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">positive_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">like</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-13-d07de71c07d9&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span>positive_words<span class="ansiblue">.</span>append<span class="ansiblue">(</span>like<span class="ansiblue">)</span><span class="ansiblue"></span>
+
+<span class="ansired">NameError</span>: name &apos;like&apos; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">new_word_to_add</span> <span class="o">=</span> <span class="s">&#39;like&#39;</span>
+<span class="n">positive_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_word_to_add</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">positive_words</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;awesome&apos;, &apos;good&apos;, &apos;nice&apos;, &apos;super&apos;, &apos;fun&apos;, &apos;delightful&apos;, &apos;like&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Your turn.</p>
+<p>Make a list out callled <code>negative_words</code> that includes awful, lame, horrible and bad. <code>print</code> out the contents.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">negative_words</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;awful&#39;</span><span class="p">,</span><span class="s">&#39;lame&#39;</span><span class="p">,</span><span class="s">&#39;horrible&#39;</span><span class="p">,</span><span class="s">&#39;bad&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">negative_words</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;awful&apos;, &apos;lame&apos;, &apos;horrible&apos;, &apos;bad&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Combining lists</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">emotional_words</span> <span class="o">=</span> <span class="n">negative_words</span> <span class="o">+</span> <span class="n">positive_words</span>
+<span class="k">print</span> <span class="n">emotional_words</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;awful&apos;, &apos;lame&apos;, &apos;horrible&apos;, &apos;bad&apos;, &apos;awesome&apos;, &apos;good&apos;, &apos;nice&apos;, &apos;super&apos;, &apos;fun&apos;, &apos;delightful&apos;, &apos;like&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">tweet</span> <span class="o">=</span> <span class="s">&#39;We have some delightful new food in the cafeteria. Awesome!!!&#39;</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">words</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;We&apos;, &apos;have&apos;, &apos;some&apos;, &apos;delightful&apos;, &apos;new&apos;, &apos;food&apos;, &apos;in&apos;, &apos;the&apos;, &apos;cafeteria.&apos;, &apos;Awesome!!!&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Measuring</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[19]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+10
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[20]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+61
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="loops">Loops</h2>
+<p>Was any of our sentence words in the postive word list?</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">word</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+We
+have
+some
+delightful
+new
+food
+in
+the
+cafeteria.
+Awesome!!!
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+<span class="k">print</span> <span class="n">word</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_pyerr">
+<pre>
+<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-22-8d4b96107be0&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">2</span>
+<span class="ansired">    print word</span>
+        ^
+<span class="ansired">IndentationError</span><span class="ansired">:</span> expected an indented block
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[23]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">positive_words</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">word</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+delightful
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[24]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">tweet_2</span> <span class="o">=</span> <span class="s">&quot;Food is lame today. I don&#39;t like it at all.&quot;</span>
+<span class="n">words_2</span> <span class="o">=</span> <span class="n">tweet_2</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words_2</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">positive_words</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&#39;+&#39;</span>
+    <span class="k">elif</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">negative_words</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&#39;-&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+-
++
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[25]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">positive_words</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">word</span> <span class="o">+</span> <span class="s">&#39; is a positive word.&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+delightful is a positive word.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[26]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;3&#39;</span> <span class="o">+</span> <span class="s">&#39; is a number.&#39;</span>
+<span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39; is a number.&#39;</span>
+
+<span class="k">print</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s"> is a number.&#39;</span> <span class="o">%</span> <span class="mi">3</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+3 is a number.
+3 is a number.
+3 is a number.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="mi">3</span> <span class="o">+</span> <span class="s">&#39; is a number.&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-27-43490b2e84f2&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span><span class="ansigreen">print</span> <span class="ansicyan">3</span> <span class="ansiblue">+</span> <span class="ansiblue">&apos; is a number.&apos;</span><span class="ansiblue"></span>
+
+<span class="ansired">TypeError</span>: unsupported operand type(s) for +: &apos;int&apos; and &apos;str&apos;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[28]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">some_number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">]:</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">some_number</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39; is a number.&#39;</span>
+    <span class="k">print</span> <span class="n">sentence</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+1 is a number.
+2 is a number.
+4 is a number.
+9 is a number.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="text-cleaning">Text cleaning</h3>
+<p>Or why Awesome!!! wasn't a positive word</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">tweet</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+we have some delightful new food in the cafeteria. awesome!!!
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But we can't do it with a list of things.</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[30]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">words</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-30-14fb7edbf297&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span><span class="ansigreen">print</span> words<span class="ansiblue">.</span>lower<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue"></span>
+
+<span class="ansired">AttributeError</span>: &apos;list&apos; object has no attribute &apos;lower&apos;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So you'll either need clean the whole sentence, each word, or both.</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[31]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="n">word_lower</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">word_lower</span> <span class="ow">in</span> <span class="n">positive_words</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">word_lower</span> <span class="o">+</span> <span class="s">&#39; is a positive word.&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+delightful is a positive word.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Updating our loop, we still don’t find <code>awesome</code> yet.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[32]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;awesome!!!&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+awesome
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Getting rid of '!&quot;#</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[33]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">punctuation</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[34]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">punctuation</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[34]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;!&quot;#$%&amp;\&apos;()*+,-./:;&lt;=&gt;?@[\\]^_&#96;{|}~&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[35]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="s">&#39;Awesome!!!!&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[35]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;Awesome&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[36]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="s">&#39;Awesome?!?!&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[36]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;Awesome&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[37]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="s">&#39;Awesome!!!! party&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[37]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;Awesome!!!! party&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[38]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;awesome!!! party&#39;</span>
+<span class="k">print</span> <span class="s">&#39;awesome!!! party&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;!&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+awesome!!! party
+awesome party
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[39]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">word</span> <span class="o">=</span> <span class="s">&#39;awesome!!!&#39;</span>
+<span class="n">word_processed</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s">&#39;!&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">word_processed</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+awesome
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[40]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">word_processed</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s">&#39;!&#39;</span><span class="p">)</span>
+<span class="n">word_processed</span> <span class="o">=</span> <span class="n">word_processed</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">word_processed</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+awesome
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[41]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="n">word_processed</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">word_processed</span> <span class="o">=</span> <span class="n">word_processed</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">word_processed</span> <span class="ow">in</span> <span class="n">positive_words</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">word</span> <span class="o">+</span> <span class="s">&#39; is a positive word&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+delightful is a positive word
+Awesome!!! is a positive word
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It worked!!!</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[42]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">postive_counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="n">word_processed</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">word_processed</span> <span class="o">=</span> <span class="n">word_processed</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">word_processed</span> <span class="ow">in</span> <span class="n">positive_words</span><span class="p">:</span>
+        <span class="n">postive_counter</span> <span class="o">=</span> <span class="n">postive_counter</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">print</span> <span class="n">postive_counter</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+2
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's do this for real.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[43]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">negative_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;negative.txt&#39;</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[44]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">negative_file</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[44]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;abandoned\nabandonment\naberration\naberration\nabhorr&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[45]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">negative_list</span> <span class="o">=</span> <span class="n">negative_file</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[46]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">negative_list</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[46]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+[&apos;abandoned&apos;, &apos;abandonment&apos;, &apos;aberration&apos;, &apos;aberration&apos;, &apos;abhorred&apos;]
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[47]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">postive_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;positive.txt&#39;</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">postive_list</span> <span class="o">=</span> <span class="n">postive_file</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">postive_list</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">negative_list</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+2230
+3905
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[48]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">obama_tweets</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;obama_tweets.txt&#39;</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">obama_tweets</span> <span class="o">=</span> <span class="n">obama_tweets</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Avoid copy and paste text in file! Make a function!</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[49]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">open_list</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">list_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">list_file</span> <span class="o">=</span> <span class="n">list_file</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">list_file</span>
+
+<span class="n">obama_tweets</span> <span class="o">=</span> <span class="n">open_list</span><span class="p">(</span><span class="s">&#39;obama_tweets.txt&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[50]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">obama_tweets</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[50]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+[&apos;Obama has called the GOP budget social Darwinism. Nice try, but they believe in social creationism.&apos;,
+ &apos;In his teen years, Obama has been known to use marijuana and cocaine.&apos;,
+ &apos;IPA Congratulates President Barack Obama for Leadership Regarding JOBS Act: WASHINGTON, Apr 05, 2012 (BUSINESS W... http://t.co/8le3DC8E&apos;,
+ &apos;RT @Professor_Why: #WhatsRomneyHiding - his connection to supporters of Critical Race Theory.... Oh wait, that was Obama, not Romney...&apos;,
+ &apos;RT @wardollarshome: Obama has approved more targeted assassinations than any modern US prez; READ &amp; RT: http://t.co/bfC4gbBW&apos;]
 </pre>
 
 </div>
@@ -1898,45 +3373,392 @@ In&nbsp;[3]:
 </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="frequently-used-python-packages">Frequently used Python Packages</h4>
-<p>Data aquisition</p>
-<ul>
-<li><a href="http://docs.python-requests.org/en/latest/">requests</a> Web scraping</li>
-<li><a href="http://wwwsearch.sourceforge.net/mechanize/">mechanize</a> Web scraping</li>
-<li><a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> HTML cleaning</li>
-<li><a href="http://tweepy.github.io">Tweepy</a> Access to Twitter API</li>
-<li><a href="http://developer.marvel.com">Marvel Comics</a> Access to Marvel Universe</li>
-<li><a href="https://dataset.readthedocs.org/en/latest/">database</a> Relational database/SQL</li>
-</ul>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Analysis</p>
-<ul>
-<li><a href="http://nltk.org">NLTK</a> Natural Language Toolkit. There's a <a href="http://nltk.org/book/">book</a></li>
-<li><a href="http://scikit-learn.org/stable/">scikit-learn</a> Machine learning</li>
-<li><a href="http://pandas.pydata.org">pandas</a> Data management and analysis</li>
-<li><a href="http://radimrehurek.com/gensim/">gensim</a> Topic modeling</li>
-<li><a href="http://networkx.github.io">NetworkX</a> Network analysis</li>
-<li><a href="http://www.numpy.org">NumPy</a> and <a href="http://scipy.org">scipy</a> Computational backbone</li>
-<li><a href="http://rpy.sourceforge.net">rpy</a> Python bindings for R</li>
-</ul>
-</div>
-    </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[51]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre>
+<div class="highlight"><pre><span class="k">print</span> <span class="n">obama_tweets</span><span class="p">[</span><span class="mi">52</span><span class="p">:</span><span class="mi">55</span><span class="p">]</span>
 </pre></div>
 
 </div>
 </div>
 
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&quot;Barack Obama President Ronald Reagan&apos;s Initial Actions Project: President Ronald Reagan was also facing an econo... http://t.co/8Go8oCpf&quot;, &apos;RT @TXGaryM: Yes #WHFail RT @jltho: This #WhatsRomneyHiding hashtag is entertaining. Is this another social media backfire from the Obama administration?&apos;, &apos;Barack Obama LONGBOARD Package CORE 7&quot; TRUCKS 76mm BIGFOOT WHEELS: The newest addition to the Bigfoot Collection... http://t.co/cnHRuUBZ&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[52]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">obama_tweets</span><span class="p">[</span><span class="mi">52</span><span class="p">:</span><span class="mi">55</span><span class="p">]:</span>
+    <span class="k">print</span> <span class="n">tweet</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Barack Obama President Ronald Reagan&apos;s Initial Actions Project: President Ronald Reagan was also facing an econo... http://t.co/8Go8oCpf
+RT @TXGaryM: Yes #WHFail RT @jltho: This #WhatsRomneyHiding hashtag is entertaining. Is this another social media backfire from the Obama administration?
+Barack Obama LONGBOARD Package CORE 7&quot; TRUCKS 76mm BIGFOOT WHEELS: The newest addition to the Bigfoot Collection... http://t.co/cnHRuUBZ
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's get going!!!</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[53]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#loop, but don&#39;t go through everything yet</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">obama_tweets</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="k">print</span> <span class="n">tweet</span>
+    <span class="n">positive_counter</span><span class="o">=</span><span class="mi">0</span>
+    <span class="c">#Lower case everything</span>
+    <span class="n">tweet_processed</span><span class="o">=</span><span class="n">tweet</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="c">#split by &#39; &#39; into a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">tweet_processed</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    
+    <span class="c">#Loop through each word in the tweet</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="n">clean_word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">clean_word</span> <span class="ow">in</span> <span class="n">postive_list</span><span class="p">:</span>
+            <span class="k">print</span> <span class="n">clean_word</span>
+            <span class="n">positive_counter</span><span class="o">=</span><span class="n">positive_counter</span><span class="o">+</span><span class="mi">1</span>
+    
+    <span class="k">print</span> <span class="n">positive_counter</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Obama has called the GOP budget social Darwinism. Nice try, but they believe in social creationism.
+nice
+1 16
+In his teen years, Obama has been known to use marijuana and cocaine.
+0 13
+IPA Congratulates President Barack Obama for Leadership Regarding JOBS Act: WASHINGTON, Apr 05, 2012 (BUSINESS W... http://t.co/8le3DC8E
+0 17
+RT @Professor_Why: #WhatsRomneyHiding - his connection to supporters of Critical Race Theory.... Oh wait, that was Obama, not Romney...
+0 19
+RT @wardollarshome: Obama has approved more targeted assassinations than any modern US prez; READ &amp; RT: http://t.co/bfC4gbBW
+modern
+1 17
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Your turn. Add a negative_counter!</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[54]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#loop, but don&#39;t go through everything yet</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">obama_tweets</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+
+    <span class="n">positive_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">negative_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c">#Lower case everything</span>
+    <span class="n">tweet_processed</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="c">#split by &#39; &#39; into a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">tweet_processed</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    
+    <span class="c">#Loop through each word in the tweet</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="n">clean_word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">clean_word</span> <span class="ow">in</span> <span class="n">postive_list</span><span class="p">:</span>
+            <span class="n">positive_counter</span> <span class="o">=</span> <span class="n">positive_counter</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">clean_word</span> <span class="ow">in</span> <span class="n">negative_list</span><span class="p">:</span>
+            <span class="n">negative_counter</span> <span class="o">=</span> <span class="n">negative_counter</span> <span class="o">+</span> <span class="mi">1</span>
+    
+    <span class="k">print</span> <span class="n">positive_counter</span><span class="p">,</span> <span class="n">negative_counter</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+1 0 16
+0 0 13
+0 0 17
+0 0 19
+1 0 17
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now let's get this out of Python</p>
 </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[55]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">csv</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[56]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">csv_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;tweet_sentiment.csv&#39;</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span> <span class="n">csv_file</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[57]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#loop, but don&#39;t go through everything yet</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">obama_tweets</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+
+    <span class="n">positive_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">negative_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c">#Lower case everything</span>
+    <span class="n">tweet_processed</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="c">#split by &#39; &#39; into a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">tweet_processed</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    
+    <span class="c">#Loop through each word in the tweet</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="n">clean_word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">clean_word</span> <span class="ow">in</span> <span class="n">postive_list</span><span class="p">:</span>
+            <span class="n">positive_counter</span> <span class="o">=</span> <span class="n">positive_counter</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">clean_word</span> <span class="ow">in</span> <span class="n">negative_list</span><span class="p">:</span>
+            <span class="n">negative_counter</span> <span class="o">=</span> <span class="n">negative_counter</span> <span class="o">+</span> <span class="mi">1</span>
+    
+    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span> <span class="p">[</span><span class="n">positive_counter</span><span class="p">,</span> <span class="n">negative_counter</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)]</span> <span class="p">)</span>
+
+<span class="n">csv_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[58]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="o">!</span>cat tweet_sentiment.csv
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+1,0,16
+0,0,13
+0,0,17
+0,0,19
+1,0,17
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Why only 5 rows?</p>
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[59]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">csv_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;tweet_sentiment.csv&#39;</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span> <span class="n">csv_file</span> <span class="p">)</span>
+
+<span class="c">#loop</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">obama_tweets</span><span class="p">[:]:</span>
+    <span class="n">positive_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">negative_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c">#Lower case everything</span>
+    <span class="n">tweet_processed</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="c">#split by &#39; &#39; into a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">tweet_processed</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="c">#Loop through each word in the tweet</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="n">clean_word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">clean_word</span> <span class="ow">in</span> <span class="n">postive_list</span><span class="p">:</span>
+            <span class="n">positive_counter</span> <span class="o">=</span> <span class="n">positive_counter</span> <span class="o">+</span> <span class="mi">1</span>
+            
+        <span class="k">if</span> <span class="n">clean_word</span> <span class="ow">in</span> <span class="n">negative_list</span><span class="p">:</span>
+            <span class="n">negative_counter</span> <span class="o">=</span> <span class="n">negative_counter</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span> <span class="p">[</span> <span class="n">positive_counter</span><span class="p">,</span> <span class="n">negative_counter</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)]</span> <span class="p">)</span>
+
+<span class="n">csv_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="stata7.png" />
+</div>
+<p>That's not Python</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>csv_writer.writerow( [ 'postive', 'negative', 'length'] )</code></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In case your wondering, I would probably make my code a little different</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[60]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">clean_split</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; Take sentence and return cleaned list of words &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tweet</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+<span class="c">#turn the lists into sets so we can do intersections</span>
+<span class="n">postive_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">postive_list</span><span class="p">)</span>
+<span class="n">negative_set</span><span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">negative_list</span><span class="p">)</span>
+
+
+<span class="n">sentiment</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">obama_tweets</span><span class="p">:</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">clean_split</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="n">postive_counter</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span> <span class="n">postive_set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">negative_counter</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span> <span class="n">negative_set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">sentiment</span><span class="o">.</span><span class="n">append</span> <span class="p">(</span> <span class="p">[</span> <span class="n">postive_counter</span> <span class="p">,</span> <span class="n">negative_counter</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)]</span> <span class="p">)</span>
+
+<span class="k">with</span>  <span class="nb">open</span><span class="p">(</span><span class="s">&#39;tweet_sentiment_2.csv&#39;</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+    <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span> <span class="n">csv_file</span> <span class="p">)</span>
+    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">sentiment</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
     </section>
 </div>
 </div>

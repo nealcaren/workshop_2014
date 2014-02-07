@@ -1734,143 +1734,109 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="neal-caren">Neal Caren</h3>
-<p>Department of Sociology<br />University of North Carolina, Chapel Hill<br />neal.caren@gmail.com<br /><span class="citation">@haphazardsoc</span></p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Winning makes us happy.<br /><img src="fb.png" /><br />by Sean J. Taylor (<span class="citation">@seanjtaylor</span>)</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Yelp can tell us how SES structures food options.</p>
-<p><img src="files\high_ses.png" /> <img src="files\mid_ses.png" /> <img src="files\low_ses.png" /></p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Or map who supports secession</p>
-<div class="figure">
-<img src="files\petitions.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="goals-for-today">Goals for today</h3>
-<p>Understand text collection and analysis in Python</p>
+<h2 id="using-apis">Using APIs</h2>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>well enough so that you can Google your problems, find the answer, and implement it.</p>
+<p>What are APIs?</p>
+<p>Structure ways people can give you their data.</p>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="more-specifically">More specifically</h4>
-<ol style="list-style-type: decimal">
-<li>Up and running with IPython (1_Into)</li>
-<li>Understand a basic workflow (2_Twitter)</li>
-<li>Basics of Python and sentiment analysis (3_Sentiment)</li>
-<li>Collecting data from a website (4_Upworthy)</li>
-<li>Collecting data from an API (5_Times)</li>
-<li>Basic text ML with scikit-learn (6_classification)</li>
-</ol>
+<p>Why?</p>
+<p>Usually because they want to help web/mobile developers attract more users to their service.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Twitter doesn't have an API to help you out.</p>
+<p>They want developers to build apps to drive more eyeballs to their service.</p>
 </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="why-python">Why Python</h4>
-</div><div class="fragment">
-    
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="figure">
-<img src="Stanford.jpg" />
+<img src="times_inequality.png" />
 </div>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="setup">Setup</h4>
-<p>On your computer</p>
-<ul>
-<li><a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a></li>
-<li><a href="https://www.enthought.com/products/epd/">Enthought</a></li>
-<li><a href="http://www.python.org">Python</a></li>
-</ul>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On the internet</p>
-<ul>
-<li><a href="https://wakari.io">Wakari</a></li>
-</ul>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="slides-and-code-for-today">Slides and Code for Today</h4>
-<p>Links to get them on the internet</p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="getting-yourself-setup">Getting yourself setup</h4>
-<p>On a Mac</p>
+<p>No love with the scrape!!!</p>
 <div class="figure">
-<img src="on_a_mac.png" />
+<img src="files\no_luck.png" />
 </div>
 </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On Windows</p>
-<div class="figure">
-<img src="windows.png" />
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
 </div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">requests</span>
+</pre></div>
+
+</div>
+</div>
+
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ipython-notebooks-are-what-all-the-cool-kids-use.">Ipython Notebooks are what all the cool kids use.</h4>
-<div class="figure">
-<img src="first_screen.png" />
+<p>Do me a favor and sign up to be a <a href="http://developer.nytimes.com">developer</a> with the New York Times and get your own API key.</p>
 </div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">my_times_api_key</span> <span class="o">=</span> <span class="s">&#39;d20bc9ac37156ecc4cb3d78eb956201d:0:54059647&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="a-new-notebook">A new notebook</h4>
-<div class="figure">
-<img src="new_workbook.png" />
-</div>
+<p>APIs can can be accessed like a normal URL, but they are often very long, complicated, and involve variables you want to change. For example, you can get the information about the first 10 articles published in the New York Times that used the word inequality with:</p>
+<p><a href="http://api.nytimes.com/svc/search/v2/articlesearch.json?sort=newest&amp;begin_date=20130101&amp;end_date=20131231&amp;api-key=d20bc9ac37156ecc4cb3d78eb956201d%3A0%3A54059647&amp;q=inequality&amp;page=0">http://api.nytimes.com/svc/search/v2/articlesearch.json?sort=newest&amp;begin_date=20130101&amp;end_date=20131231&amp;api-key=d20bc9ac37156ecc4cb3d78eb956201d%3A0%3A54059647&amp;q=inequality&amp;page=0</a></p>
+<p>Requests allows you to do this in a more civilized way.</p>
 </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Cells can be Markdown (like this one) or code</p>
-<div class="figure">
-<img src="files\cell_types.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="to-start-off-with">To start off with</h4>
-<p>Make sure you hit <code>Shift-Enter</code> or <code>Ctrl-Enter</code> when you are done.</p>
-</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<div class="highlight"><pre><span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;q&#39;</span>         <span class="p">:</span> <span class="s">&#39;inequality&#39;</span><span class="p">,</span> 
+           <span class="s">&#39;begin_date&#39;</span><span class="p">:</span> <span class="s">&#39;20130101&#39;</span> <span class="p">,</span>
+           <span class="s">&#39;end_date&#39;</span>  <span class="p">:</span> <span class="s">&#39;20131231&#39;</span><span class="p">,</span>
+           <span class="s">&#39;api-key&#39;</span>   <span class="p">:</span>  <span class="n">my_times_api_key</span><span class="p">,</span>
+           <span class="s">&#39;sort&#39;</span>      <span class="p">:</span> <span class="s">&#39;oldest&#39;</span> <span class="p">}</span>
+
+<span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://api.nytimes.com/svc/search/v2/articlesearch.json?&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">payload</span><span class="p">)</span>
+
+<span class="n">r</span><span class="o">.</span><span class="n">url</span>
 </pre></div>
 
 </div>
@@ -1881,12 +1847,12 @@ In&nbsp;[3]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
+    Out[4]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
-4
+u&apos;http://api.nytimes.com/svc/search/v2/articlesearch.json?q=inequality&amp;sort=oldest&amp;begin_date=20130101&amp;api-key=d20bc9ac37156ecc4cb3d78eb956201d%3A0%3A54059647&amp;end_date=20131231&apos;
 </pre>
 
 </div>
@@ -1898,30 +1864,1115 @@ In&nbsp;[3]:
 </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="frequently-used-python-packages">Frequently used Python Packages</h4>
-<p>Data aquisition</p>
-<ul>
-<li><a href="http://docs.python-requests.org/en/latest/">requests</a> Web scraping</li>
-<li><a href="http://wwwsearch.sourceforge.net/mechanize/">mechanize</a> Web scraping</li>
-<li><a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> HTML cleaning</li>
-<li><a href="http://tweepy.github.io">Tweepy</a> Access to Twitter API</li>
-<li><a href="http://developer.marvel.com">Marvel Comics</a> Access to Marvel Universe</li>
-<li><a href="https://dataset.readthedocs.org/en/latest/">database</a> Relational database/SQL</li>
-</ul>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">r</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[5]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+u&apos;{&quot;response&quot;:{&quot;meta&quot;:{&quot;hits&quot;:1256,&quot;time&quot;:36,&quot;offset&quot;:0},&quot;docs&quot;:[{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/2013\\/01\\/01\\/opinion\\/struggling-to-get-a-college-degree.html&quot;,&quot;snippet&quot;:&quot;Readers react to a front-page article describing the travails of three low-income students attending college.&quot;,&quot;lead_paragraph&quot;:&quot;Readers react to a front-page article describing the travails of three low-income students attending college.&quot;,&quot;abstract&quot;:null,&quot;print_page&quot;:&quot;18&quot;,&quot;blog&quot;:[],&quot;source&quot;:&quot;The New York Times&quot;,&quot;multimedia&quot;:[],&quot;headline&quot;:{&quot;main&quot;:&quot;Struggling to Get a College Degree&quot;,&quot;kicker&quot;:&quot;Letters&quot;},&quot;keywords&quot;:[{&quot;value&quot;:&quot;Student Loans&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;rank&quot;:&quot;4&quot;},{&quot;value&quot;:&quot;Graduation Rates&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;rank&quot;:&quot;2&quot;},{&quot;value&quot;:&quot;Income&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;rank&quot;:&quot;5&quot;},{&quot;value&quot;:&quot;Colleges and Universities&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;rank&quot;:&quot;1&quot;},{&quot;value&quot;:&quot;Income Inequality&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;rank&quot;:&quot;6&quot;},{&quot;value&quot;:&quot;Scholarships and Fellowships&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;rank&quot;:&quot;3&quot;}],&quot;pub_date&quot;:&quot;2013-01-01T00:00:00Z&quot;,&quot;document_type&quot;:&quot;article&quot;,&quot;news_desk&quot;:null,&quot;section_name&quot;:&quot;Opinion&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:[],&quot;type_of_material&quot;:&quot;Letter&quot;,&quot;_id&quot;:&quot;50e2389500315214fbb81e4c&quot;,&quot;word_count&quot;:602},{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/aponline\\/2013\\/01\\/01\\/world\\/europe\\/ap-eu-vatican-new-years.html&quot;,&quot;snippet&quot;:&quot;Pope Benedict XVI said Tuesday he is convinced that peace will prevail in 2013, despite the inequality, terrorism and \\&quot;unregulated financial capitalism\\&quot; that afflict the world today.&quot;,&quot;lead_paragraph&quot;:&quot;Pope Benedict XVI said Tuesday he is convinced that peace will prevail in 2013, despite the inequality, terrorism and \\&quot;unregulated financial capitalism\\&quot; that afflict the world today.&quot;,&quot;abstract&quot;:null,&quot;print_page&quot;:null,&quot;blog&quot;:[],&quot;source&quot;:&quot;AP&quot;,&quot;multimedia&quot;:[],&quot;headline&quot;:{&quot;main&quot;:&quot;Pope Convinced of Peace in 2013 Despite World Woes&quot;},&quot;keywords&quot;:[],&quot;pub_date&quot;:&quot;2013-01-01T04:31:19Z&quot;,&quot;document_type&quot;:&quot;article&quot;,&quot;news_desk&quot;:null,&quot;section_name&quot;:&quot;World&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:{&quot;organization&quot;:&quot;THE ASSOCIATED PRESS&quot;,&quot;original&quot;:&quot;By THE ASSOCIATED PRESS&quot;,&quot;person&quot;:[]},&quot;type_of_material&quot;:&quot;&quot;,&quot;_id&quot;:&quot;50e2af0f00315214fbb81ecb&quot;,&quot;word_count&quot;:210},{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/reuters\\/2013\\/01\\/01\\/world\\/europe\\/01reuters-pope.html&quot;,&quot;snippet&quot;:&quot;Pope Benedict said in his New Year\&apos;s message on Tuesday he hoped 2013 would be a year of peace and that the world was under threat from unbridled capitalism, terrorism and criminality.&quot;,&quot;lead_paragraph&quot;:&quot;Pope Benedict said in his New Year\&apos;s message on Tuesday he hoped 2013 would be a year of peace and that the world was under threat from unbridled capitalism, terrorism and criminality.&quot;,&quot;abstract&quot;:null,&quot;print_page&quot;:null,&quot;blog&quot;:[],&quot;source&quot;:&quot;Reuters&quot;,&quot;multimedia&quot;:[],&quot;headline&quot;:{&quot;main&quot;:&quot;Pope Hopes for 2013 of Peace, Slams Unbridled Capitalism&quot;},&quot;keywords&quot;:[],&quot;pub_date&quot;:&quot;2013-01-01T07:20:08Z&quot;,&quot;document_type&quot;:&quot;article&quot;,&quot;news_desk&quot;:null,&quot;section_name&quot;:&quot;World&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:{&quot;organization&quot;:&quot;REUTERS&quot;,&quot;original&quot;:&quot;By REUTERS&quot;,&quot;person&quot;:[]},&quot;type_of_material&quot;:&quot;&quot;,&quot;_id&quot;:&quot;50e2d62b00315214fbb81ee7&quot;,&quot;word_count&quot;:442},{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/reuters\\/2013\\/01\\/02\\/world\\/middleeast\\/02reuters-oman-abortion.html&quot;,&quot;snippet&quot;:&quot;When unmarried 19-year-old Sama got pregnant, she ran away from home to have an abortion rather than face family wrath.&quot;,&quot;lead_paragraph&quot;:&quot;When unmarried 19-year-old Sama got pregnant, she ran away from home to have an abortion rather than face family wrath.&quot;,&quot;abstract&quot;:null,&quot;print_page&quot;:null,&quot;blog&quot;:[],&quot;source&quot;:&quot;Reuters&quot;,&quot;multimedia&quot;:[],&quot;headline&quot;:{&quot;main&quot;:&quot;Taboo on Premarital Sex Can Lead to Tragedy in Changing Oman&quot;},&quot;keywords&quot;:[],&quot;pub_date&quot;:&quot;2013-01-02T16:15:08Z&quot;,&quot;document_type&quot;:&quot;article&quot;,&quot;news_desk&quot;:null,&quot;section_name&quot;:&quot;World&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:{&quot;organization&quot;:&quot;REUTERS&quot;,&quot;original&quot;:&quot;By REUTERS&quot;,&quot;person&quot;:[]},&quot;type_of_material&quot;:&quot;&quot;,&quot;_id&quot;:&quot;50e4a7c600315214fbb82197&quot;,&quot;word_count&quot;:1141},{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/2013\\/01\\/03\\/us\\/politics\\/for-obama-fiscal-deal-is-a-victory-that-also-holds-risks.html&quot;,&quot;snippet&quot;:&quot;The new fiscal deal holds small victories for President Obama and his Democratic allies in Congress that further their policy aims, but Mr. Obama lost some leverage for future battles.&quot;,&quot;lead_paragraph&quot;:&quot;The new fiscal deal holds small victories for President Obama and his Democratic allies in Congress that further their policy aims, but Mr. Obama lost some leverage for future battles.&quot;,&quot;abstract&quot;:null,&quot;print_page&quot;:&quot;16&quot;,&quot;blog&quot;:[],&quot;source&quot;:&quot;The New York Times&quot;,&quot;multimedia&quot;:[{&quot;subtype&quot;:&quot;xlarge&quot;,&quot;url&quot;:&quot;images\\/2013\\/01\\/03\\/us\\/OBAMA\\/OBAMA-articleLarge-v2.jpg&quot;,&quot;height&quot;:388,&quot;width&quot;:600,&quot;legacy&quot;:{&quot;xlargewidth&quot;:&quot;600&quot;,&quot;xlarge&quot;:&quot;images\\/2013\\/01\\/03\\/us\\/OBAMA\\/OBAMA-articleLarge-v2.jpg&quot;,&quot;xlargeheight&quot;:&quot;388&quot;},&quot;type&quot;:&quot;image&quot;},{&quot;subtype&quot;:&quot;thumbnail&quot;,&quot;url&quot;:&quot;images\\/2013\\/01\\/03\\/us\\/OBAMA\\/OBAMA-thumbStandard.jpg&quot;,&quot;height&quot;:75,&quot;width&quot;:75,&quot;legacy&quot;:{&quot;thumbnailheight&quot;:&quot;75&quot;,&quot;thumbnail&quot;:&quot;images\\/2013\\/01\\/03\\/us\\/OBAMA\\/OBAMA-thumbStandard.jpg&quot;,&quot;thumbnailwidth&quot;:&quot;75&quot;},&quot;type&quot;:&quot;image&quot;}],&quot;headline&quot;:{&quot;seo&quot;:&quot;For Obama, Fiscal Deal Is a Victory That Also Holds Risks&quot;,&quot;main&quot;:&quot;For Obama, a Victory That Also Holds Risks&quot;,&quot;kicker&quot;:&quot;News Analysis&quot;},&quot;keywords&quot;:[{&quot;value&quot;:&quot;Income Tax&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;5&quot;,&quot;name&quot;:&quot;subject&quot;},{&quot;value&quot;:&quot;National Debt (US)&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;3&quot;,&quot;name&quot;:&quot;subject&quot;},{&quot;value&quot;:&quot;Obama, Barack&quot;,&quot;is_major&quot;:&quot;Y&quot;,&quot;rank&quot;:&quot;1&quot;,&quot;name&quot;:&quot;persons&quot;},{&quot;value&quot;:&quot;Federal Budget (US)&quot;,&quot;is_major&quot;:&quot;Y&quot;,&quot;rank&quot;:&quot;2&quot;,&quot;name&quot;:&quot;subject&quot;},{&quot;value&quot;:&quot;Income Inequality&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;4&quot;,&quot;name&quot;:&quot;subject&quot;}],&quot;pub_date&quot;:&quot;2013-01-03T00:00:00Z&quot;,&quot;document_type&quot;:&quot;article&quot;,&quot;news_desk&quot;:&quot;National&quot;,&quot;section_name&quot;:&quot;U.S.&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:{&quot;contributor&quot;:&quot;Jonathan Weisman contributed reporting.&quot;,&quot;person&quot;:[{&quot;organization&quot;:&quot;&quot;,&quot;role&quot;:&quot;reported&quot;,&quot;rank&quot;:1,&quot;firstname&quot;:&quot;David&quot;,&quot;lastname&quot;:&quot;LEONHARDT&quot;}],&quot;original&quot;:&quot;By DAVID LEONHARDT&quot;},&quot;type_of_material&quot;:&quot;An Analysis; News Analysis&quot;,&quot;_id&quot;:&quot;50e4ef3600315214fbb8223c&quot;,&quot;word_count&quot;:&quot;1111&quot;},{&quot;web_url&quot;:&quot;http:\\/\\/bittman.blogs.nytimes.com\\/2013\\/01\\/03\\/a-months-worth-of-links-for-new-year\\/&quot;,&quot;snippet&quot;:&quot;Some farming, health and GMO news to usher you into 2013.&quot;,&quot;lead_paragraph&quot;:null,&quot;abstract&quot;:&quot;Some farming, health and GMO news to usher you into 2013.&quot;,&quot;print_page&quot;:null,&quot;blog&quot;:[],&quot;source&quot;:&quot;The New York Times&quot;,&quot;multimedia&quot;:[],&quot;headline&quot;:{&quot;main&quot;:&quot;A Month\&apos;s Worth of Links for New Year&quot;,&quot;kicker&quot;:&quot;Mark Bittman&quot;},&quot;keywords&quot;:[{&quot;rank&quot;:&quot;1&quot;,&quot;name&quot;:&quot;persons&quot;,&quot;value&quot;:&quot;Boxer, Barbara&quot;},{&quot;rank&quot;:&quot;2&quot;,&quot;name&quot;:&quot;persons&quot;,&quot;value&quot;:&quot;Philpott, Tom&quot;},{&quot;rank&quot;:&quot;1&quot;,&quot;name&quot;:&quot;glocations&quot;,&quot;value&quot;:&quot;Colorado River&quot;},{&quot;rank&quot;:&quot;4&quot;,&quot;name&quot;:&quot;glocations&quot;,&quot;value&quot;:&quot;National Petroleum Reserve (Alaska)&quot;},{&quot;rank&quot;:&quot;3&quot;,&quot;name&quot;:&quot;glocations&quot;,&quot;value&quot;:&quot;India&quot;},{&quot;rank&quot;:&quot;2&quot;,&quot;name&quot;:&quot;glocations&quot;,&quot;value&quot;:&quot;Doha (Qatar)&quot;},{&quot;rank&quot;:&quot;6&quot;,&quot;name&quot;:&quot;glocations&quot;,&quot;value&quot;:&quot;Wyoming&quot;},{&quot;rank&quot;:&quot;5&quot;,&quot;name&quot;:&quot;glocations&quot;,&quot;value&quot;:&quot;Pakistan&quot;},{&quot;rank&quot;:&quot;5&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;Kansas City Star&quot;},{&quot;rank&quot;:&quot;6&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;Monsanto Company&quot;},{&quot;rank&quot;:&quot;8&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;PepsiCo Inc&quot;},{&quot;rank&quot;:&quot;7&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;Obesity (Journal)&quot;},{&quot;rank&quot;:&quot;9&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;United Nations&quot;},{&quot;rank&quot;:&quot;2&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;Dominos Pizza Inc&quot;},{&quot;rank&quot;:&quot;3&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;Environmental Protection Agency&quot;},{&quot;rank&quot;:&quot;4&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;Food and Drug Administration&quot;},{&quot;rank&quot;:&quot;1&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;AquaBounty Technologies&quot;},{&quot;rank&quot;:&quot;10&quot;,&quot;name&quot;:&quot;organizations&quot;,&quot;value&quot;:&quot;Wal-Mart Stores Inc&quot;},{&quot;rank&quot;:&quot;3&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;value&quot;:&quot;Diet and Nutrition&quot;},{&quot;rank&quot;:&quot;2&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;value&quot;:&quot;Aurora, Colo, Shooting (2012)&quot;},{&quot;rank&quot;:&quot;8&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;value&quot;:&quot;Soft Drinks&quot;},{&quot;rank&quot;:&quot;5&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;value&quot;:&quot;Newtown, Conn, Shooting (2012)&quot;},{&quot;rank&quot;:&quot;4&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;value&quot;:&quot;Greenhouse Gas Emissions&quot;},{&quot;rank&quot;:&quot;1&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;value&quot;:&quot;Antibiotics&quot;},{&quot;rank&quot;:&quot;7&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;value&quot;:&quot;Poverty&quot;},{&quot;rank&quot;:&quot;6&quot;,&quot;name&quot;:&quot;subject&quot;,&quot;value&quot;:&quot;Obesity&quot;}],&quot;pub_date&quot;:&quot;2013-01-03T16:29:38Z&quot;,&quot;document_type&quot;:&quot;blogpost&quot;,&quot;news_desk&quot;:null,&quot;section_name&quot;:&quot;Opinion&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:{&quot;person&quot;:[{&quot;organization&quot;:&quot;&quot;,&quot;role&quot;:&quot;reported&quot;,&quot;firstname&quot;:&quot;Mark&quot;,&quot;rank&quot;:1,&quot;lastname&quot;:&quot;BITTMAN&quot;}],&quot;original&quot;:&quot;By MARK BITTMAN&quot;},&quot;type_of_material&quot;:&quot;Blog&quot;,&quot;_id&quot;:&quot;50e5f9c600315214fbb8247e&quot;,&quot;word_count&quot;:&quot;1182&quot;},{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/roomfordebate\\/2013\\/01\\/03\\/venezuela-post-chavez\\/&quot;,&quot;snippet&quot;:&quot;What sorts of social, economic and foreign relations issues must Venezuela\&apos;s next president confront in order to guarantee a smooth transition?&quot;,&quot;lead_paragraph&quot;:&quot;&quot;,&quot;abstract&quot;:&quot;What sorts of social, economic and foreign relations issues must Venezuela\&apos;s next president confront in order to guarantee a smooth transition?&quot;,&quot;print_page&quot;:null,&quot;blog&quot;:[],&quot;source&quot;:&quot;The New York Times&quot;,&quot;multimedia&quot;:[],&quot;headline&quot;:{&quot;main&quot;:&quot;The Future of Venezuela&quot;,&quot;kicker&quot;:&quot;Room For Debate&quot;},&quot;keywords&quot;:[{&quot;value&quot;:&quot;News&quot;,&quot;name&quot;:&quot;type_of_material&quot;,&quot;rank&quot;:&quot;1&quot;}],&quot;pub_date&quot;:&quot;2013-01-03T19:11:49Z&quot;,&quot;document_type&quot;:&quot;blogpost&quot;,&quot;news_desk&quot;:null,&quot;section_name&quot;:&quot;Opinion&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:null,&quot;type_of_material&quot;:&quot;Blog&quot;,&quot;_id&quot;:&quot;5136a39dcf28d009de003a55&quot;,&quot;word_count&quot;:&quot;3881&quot;},{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/aponline\\/2013\\/01\\/03\\/us\\/ap-us-obit-lerner.html&quot;,&quot;snippet&quot;:&quot;Gerda Lerner, a pioneer in the field of women\&apos;s history and a founding member of the National Organization for Women, has died in Wisconsin, her son said Thursday. She was 92.&quot;,&quot;lead_paragraph&quot;:&quot;Gerda Lerner, a pioneer in the field of women\&apos;s history and a founding member of the National Organization for Women, has died in Wisconsin, her son said Thursday. She was 92.&quot;,&quot;abstract&quot;:null,&quot;print_page&quot;:null,&quot;blog&quot;:[],&quot;source&quot;:&quot;AP&quot;,&quot;multimedia&quot;:[],&quot;headline&quot;:{&quot;main&quot;:&quot;Women\&apos;s History Pioneer Gerda Lerner Dies at 92&quot;},&quot;keywords&quot;:[],&quot;pub_date&quot;:&quot;2013-01-03T20:26:09Z&quot;,&quot;document_type&quot;:&quot;article&quot;,&quot;news_desk&quot;:&quot;None&quot;,&quot;section_name&quot;:&quot;U.S.&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:{&quot;organization&quot;:&quot;THE ASSOCIATED PRESS&quot;,&quot;original&quot;:&quot;By THE ASSOCIATED PRESS&quot;,&quot;person&quot;:[]},&quot;type_of_material&quot;:&quot;&quot;,&quot;_id&quot;:&quot;50e6312d00315214fbb8251a&quot;,&quot;word_count&quot;:795},{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/2013\\/01\\/04\\/opinion\\/kurgman-battles-of-the-budget.html&quot;,&quot;snippet&quot;:&quot;Let\\u2019s put the cliff deal, which was part of a larger class war, in perspective.&quot;,&quot;lead_paragraph&quot;:&quot;Let\\u2019s put the cliff deal, which was part of a larger class war, in perspective.&quot;,&quot;abstract&quot;:null,&quot;print_page&quot;:&quot;23&quot;,&quot;blog&quot;:[],&quot;source&quot;:&quot;The New York Times&quot;,&quot;multimedia&quot;:[{&quot;subtype&quot;:&quot;wide&quot;,&quot;url&quot;:&quot;images\\/2010\\/09\\/16\\/opinion\\/Krugman_New\\/Krugman_New-thumbWide.jpg&quot;,&quot;height&quot;:126,&quot;width&quot;:190,&quot;legacy&quot;:{&quot;wide&quot;:&quot;images\\/2010\\/09\\/16\\/opinion\\/Krugman_New\\/Krugman_New-thumbWide.jpg&quot;,&quot;wideheight&quot;:&quot;126&quot;,&quot;widewidth&quot;:&quot;190&quot;},&quot;type&quot;:&quot;image&quot;},{&quot;subtype&quot;:&quot;xlarge&quot;,&quot;url&quot;:&quot;images\\/2010\\/09\\/16\\/opinion\\/Krugman_New\\/Krugman_New-articleLarge.jpg&quot;,&quot;height&quot;:900,&quot;width&quot;:600,&quot;legacy&quot;:{&quot;xlargewidth&quot;:&quot;600&quot;,&quot;xlarge&quot;:&quot;images\\/2010\\/09\\/16\\/opinion\\/Krugman_New\\/Krugman_New-articleLarge.jpg&quot;,&quot;xlargeheight&quot;:&quot;900&quot;},&quot;type&quot;:&quot;image&quot;},{&quot;subtype&quot;:&quot;thumbnail&quot;,&quot;url&quot;:&quot;images\\/2010\\/09\\/16\\/opinion\\/Krugman_New\\/Krugman_New-thumbStandard-v2.jpg&quot;,&quot;height&quot;:75,&quot;width&quot;:75,&quot;legacy&quot;:{&quot;thumbnailheight&quot;:&quot;75&quot;,&quot;thumbnail&quot;:&quot;images\\/2010\\/09\\/16\\/opinion\\/Krugman_New\\/Krugman_New-thumbStandard-v2.jpg&quot;,&quot;thumbnailwidth&quot;:&quot;75&quot;},&quot;type&quot;:&quot;image&quot;}],&quot;headline&quot;:{&quot;seo&quot;:&quot;Battles of the Budget&quot;,&quot;main&quot;:&quot;Battles of the Budget&quot;,&quot;kicker&quot;:&quot;Op-Ed Columnist&quot;,&quot;print_headline&quot;:&quot;Battles Of The Budget&quot;},&quot;keywords&quot;:[{&quot;value&quot;:&quot;United States Politics and Government&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;5&quot;,&quot;name&quot;:&quot;subject&quot;},{&quot;value&quot;:&quot;Senate&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;7&quot;,&quot;name&quot;:&quot;organizations&quot;},{&quot;value&quot;:&quot;Obama, Barack&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;3&quot;,&quot;name&quot;:&quot;persons&quot;},{&quot;value&quot;:&quot;House of Representatives&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;6&quot;,&quot;name&quot;:&quot;organizations&quot;},{&quot;value&quot;:&quot;Federal Budget (US)&quot;,&quot;is_major&quot;:&quot;Y&quot;,&quot;rank&quot;:&quot;1&quot;,&quot;name&quot;:&quot;subject&quot;},{&quot;value&quot;:&quot;National Debt (US)&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;2&quot;,&quot;name&quot;:&quot;subject&quot;},{&quot;value&quot;:&quot;Law and Legislation&quot;,&quot;is_major&quot;:&quot;N&quot;,&quot;rank&quot;:&quot;4&quot;,&quot;name&quot;:&quot;subject&quot;}],&quot;pub_date&quot;:&quot;2013-01-04T00:00:00Z&quot;,&quot;document_type&quot;:&quot;article&quot;,&quot;news_desk&quot;:&quot;Editorial&quot;,&quot;section_name&quot;:&quot;Opinion&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:{&quot;contributor&quot;:&quot;&quot;,&quot;person&quot;:[{&quot;organization&quot;:&quot;&quot;,&quot;role&quot;:&quot;reported&quot;,&quot;rank&quot;:1,&quot;firstname&quot;:&quot;Paul&quot;,&quot;lastname&quot;:&quot;KRUGMAN&quot;}],&quot;original&quot;:&quot;By PAUL KRUGMAN&quot;},&quot;type_of_material&quot;:&quot;Op-Ed&quot;,&quot;_id&quot;:&quot;50e63a7f00315214fbb82536&quot;,&quot;word_count&quot;:&quot;816&quot;},{&quot;web_url&quot;:&quot;http:\\/\\/www.nytimes.com\\/aponline\\/2013\\/01\\/04\\/us\\/ap-us-obit-lerner.html&quot;,&quot;snippet&quot;:&quot;Gerda Lerner spent her 18th birthday in a Nazi prison, sharing a cell with two gentile women arrested for political work who shared their food with the Jewish teenager because jailers restricted rations for Jews.&quot;,&quot;lead_paragraph&quot;:&quot;Gerda Lerner spent her 18th birthday in a Nazi prison, sharing a cell with two gentile women arrested for political work who shared their food with the Jewish teenager because jailers restricted rations for Jews.&quot;,&quot;abstract&quot;:null,&quot;print_page&quot;:null,&quot;blog&quot;:[],&quot;source&quot;:&quot;AP&quot;,&quot;multimedia&quot;:[],&quot;headline&quot;:{&quot;main&quot;:&quot;Women\&apos;s History Pioneer Gerda Lerner Dies at 92&quot;},&quot;keywords&quot;:[],&quot;pub_date&quot;:&quot;2013-01-04T03:07:26Z&quot;,&quot;document_type&quot;:&quot;article&quot;,&quot;news_desk&quot;:&quot;None&quot;,&quot;section_name&quot;:&quot;U.S.&quot;,&quot;subsection_name&quot;:null,&quot;byline&quot;:{&quot;organization&quot;:&quot;THE ASSOCIATED PRESS&quot;,&quot;original&quot;:&quot;By THE ASSOCIATED PRESS&quot;,&quot;person&quot;:[]},&quot;type_of_material&quot;:&quot;&quot;,&quot;_id&quot;:&quot;50e68ee400315214fbb825a6&quot;,&quot;word_count&quot;:835}]},&quot;status&quot;:&quot;OK&quot;,&quot;copyright&quot;:&quot;Copyright (c) 2013 The New York Times Company.  All Rights Reserved.&quot;}&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[6]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+{u&apos;copyright&apos;: u&apos;Copyright (c) 2013 The New York Times Company.  All Rights Reserved.&apos;,
+ u&apos;response&apos;: {u&apos;docs&apos;: [{u&apos;_id&apos;: u&apos;50e2389500315214fbb81e4c&apos;,
+    u&apos;abstract&apos;: None,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: [],
+    u&apos;document_type&apos;: u&apos;article&apos;,
+    u&apos;headline&apos;: {u&apos;kicker&apos;: u&apos;Letters&apos;,
+     u&apos;main&apos;: u&apos;Struggling to Get a College Degree&apos;},
+    u&apos;keywords&apos;: [{u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;4&apos;,
+      u&apos;value&apos;: u&apos;Student Loans&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;, u&apos;rank&apos;: u&apos;2&apos;, u&apos;value&apos;: u&apos;Graduation Rates&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;, u&apos;rank&apos;: u&apos;5&apos;, u&apos;value&apos;: u&apos;Income&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;1&apos;,
+      u&apos;value&apos;: u&apos;Colleges and Universities&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;, u&apos;rank&apos;: u&apos;6&apos;, u&apos;value&apos;: u&apos;Income Inequality&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;3&apos;,
+      u&apos;value&apos;: u&apos;Scholarships and Fellowships&apos;}],
+    u&apos;lead_paragraph&apos;: u&apos;Readers react to a front-page article describing the travails of three low-income students attending college.&apos;,
+    u&apos;multimedia&apos;: [],
+    u&apos;news_desk&apos;: None,
+    u&apos;print_page&apos;: u&apos;18&apos;,
+    u&apos;pub_date&apos;: u&apos;2013-01-01T00:00:00Z&apos;,
+    u&apos;section_name&apos;: u&apos;Opinion&apos;,
+    u&apos;snippet&apos;: u&apos;Readers react to a front-page article describing the travails of three low-income students attending college.&apos;,
+    u&apos;source&apos;: u&apos;The New York Times&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;Letter&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/2013/01/01/opinion/struggling-to-get-a-college-degree.html&apos;,
+    u&apos;word_count&apos;: 602},
+   {u&apos;_id&apos;: u&apos;50e2af0f00315214fbb81ecb&apos;,
+    u&apos;abstract&apos;: None,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: {u&apos;organization&apos;: u&apos;THE ASSOCIATED PRESS&apos;,
+     u&apos;original&apos;: u&apos;By THE ASSOCIATED PRESS&apos;,
+     u&apos;person&apos;: []},
+    u&apos;document_type&apos;: u&apos;article&apos;,
+    u&apos;headline&apos;: {u&apos;main&apos;: u&apos;Pope Convinced of Peace in 2013 Despite World Woes&apos;},
+    u&apos;keywords&apos;: [],
+    u&apos;lead_paragraph&apos;: u&apos;Pope Benedict XVI said Tuesday he is convinced that peace will prevail in 2013, despite the inequality, terrorism and &quot;unregulated financial capitalism&quot; that afflict the world today.&apos;,
+    u&apos;multimedia&apos;: [],
+    u&apos;news_desk&apos;: None,
+    u&apos;print_page&apos;: None,
+    u&apos;pub_date&apos;: u&apos;2013-01-01T04:31:19Z&apos;,
+    u&apos;section_name&apos;: u&apos;World&apos;,
+    u&apos;snippet&apos;: u&apos;Pope Benedict XVI said Tuesday he is convinced that peace will prevail in 2013, despite the inequality, terrorism and &quot;unregulated financial capitalism&quot; that afflict the world today.&apos;,
+    u&apos;source&apos;: u&apos;AP&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/aponline/2013/01/01/world/europe/ap-eu-vatican-new-years.html&apos;,
+    u&apos;word_count&apos;: 210},
+   {u&apos;_id&apos;: u&apos;50e2d62b00315214fbb81ee7&apos;,
+    u&apos;abstract&apos;: None,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: {u&apos;organization&apos;: u&apos;REUTERS&apos;,
+     u&apos;original&apos;: u&apos;By REUTERS&apos;,
+     u&apos;person&apos;: []},
+    u&apos;document_type&apos;: u&apos;article&apos;,
+    u&apos;headline&apos;: {u&apos;main&apos;: u&apos;Pope Hopes for 2013 of Peace, Slams Unbridled Capitalism&apos;},
+    u&apos;keywords&apos;: [],
+    u&apos;lead_paragraph&apos;: u&quot;Pope Benedict said in his New Year&apos;s message on Tuesday he hoped 2013 would be a year of peace and that the world was under threat from unbridled capitalism, terrorism and criminality.&quot;,
+    u&apos;multimedia&apos;: [],
+    u&apos;news_desk&apos;: None,
+    u&apos;print_page&apos;: None,
+    u&apos;pub_date&apos;: u&apos;2013-01-01T07:20:08Z&apos;,
+    u&apos;section_name&apos;: u&apos;World&apos;,
+    u&apos;snippet&apos;: u&quot;Pope Benedict said in his New Year&apos;s message on Tuesday he hoped 2013 would be a year of peace and that the world was under threat from unbridled capitalism, terrorism and criminality.&quot;,
+    u&apos;source&apos;: u&apos;Reuters&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/reuters/2013/01/01/world/europe/01reuters-pope.html&apos;,
+    u&apos;word_count&apos;: 442},
+   {u&apos;_id&apos;: u&apos;50e4a7c600315214fbb82197&apos;,
+    u&apos;abstract&apos;: None,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: {u&apos;organization&apos;: u&apos;REUTERS&apos;,
+     u&apos;original&apos;: u&apos;By REUTERS&apos;,
+     u&apos;person&apos;: []},
+    u&apos;document_type&apos;: u&apos;article&apos;,
+    u&apos;headline&apos;: {u&apos;main&apos;: u&apos;Taboo on Premarital Sex Can Lead to Tragedy in Changing Oman&apos;},
+    u&apos;keywords&apos;: [],
+    u&apos;lead_paragraph&apos;: u&apos;When unmarried 19-year-old Sama got pregnant, she ran away from home to have an abortion rather than face family wrath.&apos;,
+    u&apos;multimedia&apos;: [],
+    u&apos;news_desk&apos;: None,
+    u&apos;print_page&apos;: None,
+    u&apos;pub_date&apos;: u&apos;2013-01-02T16:15:08Z&apos;,
+    u&apos;section_name&apos;: u&apos;World&apos;,
+    u&apos;snippet&apos;: u&apos;When unmarried 19-year-old Sama got pregnant, she ran away from home to have an abortion rather than face family wrath.&apos;,
+    u&apos;source&apos;: u&apos;Reuters&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/reuters/2013/01/02/world/middleeast/02reuters-oman-abortion.html&apos;,
+    u&apos;word_count&apos;: 1141},
+   {u&apos;_id&apos;: u&apos;50e4ef3600315214fbb8223c&apos;,
+    u&apos;abstract&apos;: None,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: {u&apos;contributor&apos;: u&apos;Jonathan Weisman contributed reporting.&apos;,
+     u&apos;original&apos;: u&apos;By DAVID LEONHARDT&apos;,
+     u&apos;person&apos;: [{u&apos;firstname&apos;: u&apos;David&apos;,
+       u&apos;lastname&apos;: u&apos;LEONHARDT&apos;,
+       u&apos;organization&apos;: u&apos;&apos;,
+       u&apos;rank&apos;: 1,
+       u&apos;role&apos;: u&apos;reported&apos;}]},
+    u&apos;document_type&apos;: u&apos;article&apos;,
+    u&apos;headline&apos;: {u&apos;kicker&apos;: u&apos;News Analysis&apos;,
+     u&apos;main&apos;: u&apos;For Obama, a Victory That Also Holds Risks&apos;,
+     u&apos;seo&apos;: u&apos;For Obama, Fiscal Deal Is a Victory That Also Holds Risks&apos;},
+    u&apos;keywords&apos;: [{u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;5&apos;,
+      u&apos;value&apos;: u&apos;Income Tax&apos;},
+     {u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;3&apos;,
+      u&apos;value&apos;: u&apos;National Debt (US)&apos;},
+     {u&apos;is_major&apos;: u&apos;Y&apos;,
+      u&apos;name&apos;: u&apos;persons&apos;,
+      u&apos;rank&apos;: u&apos;1&apos;,
+      u&apos;value&apos;: u&apos;Obama, Barack&apos;},
+     {u&apos;is_major&apos;: u&apos;Y&apos;,
+      u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;2&apos;,
+      u&apos;value&apos;: u&apos;Federal Budget (US)&apos;},
+     {u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;4&apos;,
+      u&apos;value&apos;: u&apos;Income Inequality&apos;}],
+    u&apos;lead_paragraph&apos;: u&apos;The new fiscal deal holds small victories for President Obama and his Democratic allies in Congress that further their policy aims, but Mr. Obama lost some leverage for future battles.&apos;,
+    u&apos;multimedia&apos;: [{u&apos;height&apos;: 388,
+      u&apos;legacy&apos;: {u&apos;xlarge&apos;: u&apos;images/2013/01/03/us/OBAMA/OBAMA-articleLarge-v2.jpg&apos;,
+       u&apos;xlargeheight&apos;: u&apos;388&apos;,
+       u&apos;xlargewidth&apos;: u&apos;600&apos;},
+      u&apos;subtype&apos;: u&apos;xlarge&apos;,
+      u&apos;type&apos;: u&apos;image&apos;,
+      u&apos;url&apos;: u&apos;images/2013/01/03/us/OBAMA/OBAMA-articleLarge-v2.jpg&apos;,
+      u&apos;width&apos;: 600},
+     {u&apos;height&apos;: 75,
+      u&apos;legacy&apos;: {u&apos;thumbnail&apos;: u&apos;images/2013/01/03/us/OBAMA/OBAMA-thumbStandard.jpg&apos;,
+       u&apos;thumbnailheight&apos;: u&apos;75&apos;,
+       u&apos;thumbnailwidth&apos;: u&apos;75&apos;},
+      u&apos;subtype&apos;: u&apos;thumbnail&apos;,
+      u&apos;type&apos;: u&apos;image&apos;,
+      u&apos;url&apos;: u&apos;images/2013/01/03/us/OBAMA/OBAMA-thumbStandard.jpg&apos;,
+      u&apos;width&apos;: 75}],
+    u&apos;news_desk&apos;: u&apos;National&apos;,
+    u&apos;print_page&apos;: u&apos;16&apos;,
+    u&apos;pub_date&apos;: u&apos;2013-01-03T00:00:00Z&apos;,
+    u&apos;section_name&apos;: u&apos;U.S.&apos;,
+    u&apos;snippet&apos;: u&apos;The new fiscal deal holds small victories for President Obama and his Democratic allies in Congress that further their policy aims, but Mr. Obama lost some leverage for future battles.&apos;,
+    u&apos;source&apos;: u&apos;The New York Times&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;An Analysis; News Analysis&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/2013/01/03/us/politics/for-obama-fiscal-deal-is-a-victory-that-also-holds-risks.html&apos;,
+    u&apos;word_count&apos;: u&apos;1111&apos;},
+   {u&apos;_id&apos;: u&apos;50e5f9c600315214fbb8247e&apos;,
+    u&apos;abstract&apos;: u&apos;Some farming, health and GMO news to usher you into 2013.&apos;,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: {u&apos;original&apos;: u&apos;By MARK BITTMAN&apos;,
+     u&apos;person&apos;: [{u&apos;firstname&apos;: u&apos;Mark&apos;,
+       u&apos;lastname&apos;: u&apos;BITTMAN&apos;,
+       u&apos;organization&apos;: u&apos;&apos;,
+       u&apos;rank&apos;: 1,
+       u&apos;role&apos;: u&apos;reported&apos;}]},
+    u&apos;document_type&apos;: u&apos;blogpost&apos;,
+    u&apos;headline&apos;: {u&apos;kicker&apos;: u&apos;Mark Bittman&apos;,
+     u&apos;main&apos;: u&quot;A Month&apos;s Worth of Links for New Year&quot;},
+    u&apos;keywords&apos;: [{u&apos;name&apos;: u&apos;persons&apos;,
+      u&apos;rank&apos;: u&apos;1&apos;,
+      u&apos;value&apos;: u&apos;Boxer, Barbara&apos;},
+     {u&apos;name&apos;: u&apos;persons&apos;, u&apos;rank&apos;: u&apos;2&apos;, u&apos;value&apos;: u&apos;Philpott, Tom&apos;},
+     {u&apos;name&apos;: u&apos;glocations&apos;, u&apos;rank&apos;: u&apos;1&apos;, u&apos;value&apos;: u&apos;Colorado River&apos;},
+     {u&apos;name&apos;: u&apos;glocations&apos;,
+      u&apos;rank&apos;: u&apos;4&apos;,
+      u&apos;value&apos;: u&apos;National Petroleum Reserve (Alaska)&apos;},
+     {u&apos;name&apos;: u&apos;glocations&apos;, u&apos;rank&apos;: u&apos;3&apos;, u&apos;value&apos;: u&apos;India&apos;},
+     {u&apos;name&apos;: u&apos;glocations&apos;, u&apos;rank&apos;: u&apos;2&apos;, u&apos;value&apos;: u&apos;Doha (Qatar)&apos;},
+     {u&apos;name&apos;: u&apos;glocations&apos;, u&apos;rank&apos;: u&apos;6&apos;, u&apos;value&apos;: u&apos;Wyoming&apos;},
+     {u&apos;name&apos;: u&apos;glocations&apos;, u&apos;rank&apos;: u&apos;5&apos;, u&apos;value&apos;: u&apos;Pakistan&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;, u&apos;rank&apos;: u&apos;5&apos;, u&apos;value&apos;: u&apos;Kansas City Star&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;, u&apos;rank&apos;: u&apos;6&apos;, u&apos;value&apos;: u&apos;Monsanto Company&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;, u&apos;rank&apos;: u&apos;8&apos;, u&apos;value&apos;: u&apos;PepsiCo Inc&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;,
+      u&apos;rank&apos;: u&apos;7&apos;,
+      u&apos;value&apos;: u&apos;Obesity (Journal)&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;, u&apos;rank&apos;: u&apos;9&apos;, u&apos;value&apos;: u&apos;United Nations&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;,
+      u&apos;rank&apos;: u&apos;2&apos;,
+      u&apos;value&apos;: u&apos;Dominos Pizza Inc&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;,
+      u&apos;rank&apos;: u&apos;3&apos;,
+      u&apos;value&apos;: u&apos;Environmental Protection Agency&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;,
+      u&apos;rank&apos;: u&apos;4&apos;,
+      u&apos;value&apos;: u&apos;Food and Drug Administration&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;,
+      u&apos;rank&apos;: u&apos;1&apos;,
+      u&apos;value&apos;: u&apos;AquaBounty Technologies&apos;},
+     {u&apos;name&apos;: u&apos;organizations&apos;,
+      u&apos;rank&apos;: u&apos;10&apos;,
+      u&apos;value&apos;: u&apos;Wal-Mart Stores Inc&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;, u&apos;rank&apos;: u&apos;3&apos;, u&apos;value&apos;: u&apos;Diet and Nutrition&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;2&apos;,
+      u&apos;value&apos;: u&apos;Aurora, Colo, Shooting (2012)&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;, u&apos;rank&apos;: u&apos;8&apos;, u&apos;value&apos;: u&apos;Soft Drinks&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;5&apos;,
+      u&apos;value&apos;: u&apos;Newtown, Conn, Shooting (2012)&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;4&apos;,
+      u&apos;value&apos;: u&apos;Greenhouse Gas Emissions&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;, u&apos;rank&apos;: u&apos;1&apos;, u&apos;value&apos;: u&apos;Antibiotics&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;, u&apos;rank&apos;: u&apos;7&apos;, u&apos;value&apos;: u&apos;Poverty&apos;},
+     {u&apos;name&apos;: u&apos;subject&apos;, u&apos;rank&apos;: u&apos;6&apos;, u&apos;value&apos;: u&apos;Obesity&apos;}],
+    u&apos;lead_paragraph&apos;: None,
+    u&apos;multimedia&apos;: [],
+    u&apos;news_desk&apos;: None,
+    u&apos;print_page&apos;: None,
+    u&apos;pub_date&apos;: u&apos;2013-01-03T16:29:38Z&apos;,
+    u&apos;section_name&apos;: u&apos;Opinion&apos;,
+    u&apos;snippet&apos;: u&apos;Some farming, health and GMO news to usher you into 2013.&apos;,
+    u&apos;source&apos;: u&apos;The New York Times&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;Blog&apos;,
+    u&apos;web_url&apos;: u&apos;http://bittman.blogs.nytimes.com/2013/01/03/a-months-worth-of-links-for-new-year/&apos;,
+    u&apos;word_count&apos;: u&apos;1182&apos;},
+   {u&apos;_id&apos;: u&apos;5136a39dcf28d009de003a55&apos;,
+    u&apos;abstract&apos;: u&quot;What sorts of social, economic and foreign relations issues must Venezuela&apos;s next president confront in order to guarantee a smooth transition?&quot;,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: None,
+    u&apos;document_type&apos;: u&apos;blogpost&apos;,
+    u&apos;headline&apos;: {u&apos;kicker&apos;: u&apos;Room For Debate&apos;,
+     u&apos;main&apos;: u&apos;The Future of Venezuela&apos;},
+    u&apos;keywords&apos;: [{u&apos;name&apos;: u&apos;type_of_material&apos;,
+      u&apos;rank&apos;: u&apos;1&apos;,
+      u&apos;value&apos;: u&apos;News&apos;}],
+    u&apos;lead_paragraph&apos;: u&apos;&apos;,
+    u&apos;multimedia&apos;: [],
+    u&apos;news_desk&apos;: None,
+    u&apos;print_page&apos;: None,
+    u&apos;pub_date&apos;: u&apos;2013-01-03T19:11:49Z&apos;,
+    u&apos;section_name&apos;: u&apos;Opinion&apos;,
+    u&apos;snippet&apos;: u&quot;What sorts of social, economic and foreign relations issues must Venezuela&apos;s next president confront in order to guarantee a smooth transition?&quot;,
+    u&apos;source&apos;: u&apos;The New York Times&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;Blog&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/roomfordebate/2013/01/03/venezuela-post-chavez/&apos;,
+    u&apos;word_count&apos;: u&apos;3881&apos;},
+   {u&apos;_id&apos;: u&apos;50e6312d00315214fbb8251a&apos;,
+    u&apos;abstract&apos;: None,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: {u&apos;organization&apos;: u&apos;THE ASSOCIATED PRESS&apos;,
+     u&apos;original&apos;: u&apos;By THE ASSOCIATED PRESS&apos;,
+     u&apos;person&apos;: []},
+    u&apos;document_type&apos;: u&apos;article&apos;,
+    u&apos;headline&apos;: {u&apos;main&apos;: u&quot;Women&apos;s History Pioneer Gerda Lerner Dies at 92&quot;},
+    u&apos;keywords&apos;: [],
+    u&apos;lead_paragraph&apos;: u&quot;Gerda Lerner, a pioneer in the field of women&apos;s history and a founding member of the National Organization for Women, has died in Wisconsin, her son said Thursday. She was 92.&quot;,
+    u&apos;multimedia&apos;: [],
+    u&apos;news_desk&apos;: u&apos;None&apos;,
+    u&apos;print_page&apos;: None,
+    u&apos;pub_date&apos;: u&apos;2013-01-03T20:26:09Z&apos;,
+    u&apos;section_name&apos;: u&apos;U.S.&apos;,
+    u&apos;snippet&apos;: u&quot;Gerda Lerner, a pioneer in the field of women&apos;s history and a founding member of the National Organization for Women, has died in Wisconsin, her son said Thursday. She was 92.&quot;,
+    u&apos;source&apos;: u&apos;AP&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/aponline/2013/01/03/us/ap-us-obit-lerner.html&apos;,
+    u&apos;word_count&apos;: 795},
+   {u&apos;_id&apos;: u&apos;50e63a7f00315214fbb82536&apos;,
+    u&apos;abstract&apos;: None,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: {u&apos;contributor&apos;: u&apos;&apos;,
+     u&apos;original&apos;: u&apos;By PAUL KRUGMAN&apos;,
+     u&apos;person&apos;: [{u&apos;firstname&apos;: u&apos;Paul&apos;,
+       u&apos;lastname&apos;: u&apos;KRUGMAN&apos;,
+       u&apos;organization&apos;: u&apos;&apos;,
+       u&apos;rank&apos;: 1,
+       u&apos;role&apos;: u&apos;reported&apos;}]},
+    u&apos;document_type&apos;: u&apos;article&apos;,
+    u&apos;headline&apos;: {u&apos;kicker&apos;: u&apos;Op-Ed Columnist&apos;,
+     u&apos;main&apos;: u&apos;Battles of the Budget&apos;,
+     u&apos;print_headline&apos;: u&apos;Battles Of The Budget&apos;,
+     u&apos;seo&apos;: u&apos;Battles of the Budget&apos;},
+    u&apos;keywords&apos;: [{u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;5&apos;,
+      u&apos;value&apos;: u&apos;United States Politics and Government&apos;},
+     {u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;organizations&apos;,
+      u&apos;rank&apos;: u&apos;7&apos;,
+      u&apos;value&apos;: u&apos;Senate&apos;},
+     {u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;persons&apos;,
+      u&apos;rank&apos;: u&apos;3&apos;,
+      u&apos;value&apos;: u&apos;Obama, Barack&apos;},
+     {u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;organizations&apos;,
+      u&apos;rank&apos;: u&apos;6&apos;,
+      u&apos;value&apos;: u&apos;House of Representatives&apos;},
+     {u&apos;is_major&apos;: u&apos;Y&apos;,
+      u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;1&apos;,
+      u&apos;value&apos;: u&apos;Federal Budget (US)&apos;},
+     {u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;2&apos;,
+      u&apos;value&apos;: u&apos;National Debt (US)&apos;},
+     {u&apos;is_major&apos;: u&apos;N&apos;,
+      u&apos;name&apos;: u&apos;subject&apos;,
+      u&apos;rank&apos;: u&apos;4&apos;,
+      u&apos;value&apos;: u&apos;Law and Legislation&apos;}],
+    u&apos;lead_paragraph&apos;: u&apos;Let\u2019s put the cliff deal, which was part of a larger class war, in perspective.&apos;,
+    u&apos;multimedia&apos;: [{u&apos;height&apos;: 126,
+      u&apos;legacy&apos;: {u&apos;wide&apos;: u&apos;images/2010/09/16/opinion/Krugman_New/Krugman_New-thumbWide.jpg&apos;,
+       u&apos;wideheight&apos;: u&apos;126&apos;,
+       u&apos;widewidth&apos;: u&apos;190&apos;},
+      u&apos;subtype&apos;: u&apos;wide&apos;,
+      u&apos;type&apos;: u&apos;image&apos;,
+      u&apos;url&apos;: u&apos;images/2010/09/16/opinion/Krugman_New/Krugman_New-thumbWide.jpg&apos;,
+      u&apos;width&apos;: 190},
+     {u&apos;height&apos;: 900,
+      u&apos;legacy&apos;: {u&apos;xlarge&apos;: u&apos;images/2010/09/16/opinion/Krugman_New/Krugman_New-articleLarge.jpg&apos;,
+       u&apos;xlargeheight&apos;: u&apos;900&apos;,
+       u&apos;xlargewidth&apos;: u&apos;600&apos;},
+      u&apos;subtype&apos;: u&apos;xlarge&apos;,
+      u&apos;type&apos;: u&apos;image&apos;,
+      u&apos;url&apos;: u&apos;images/2010/09/16/opinion/Krugman_New/Krugman_New-articleLarge.jpg&apos;,
+      u&apos;width&apos;: 600},
+     {u&apos;height&apos;: 75,
+      u&apos;legacy&apos;: {u&apos;thumbnail&apos;: u&apos;images/2010/09/16/opinion/Krugman_New/Krugman_New-thumbStandard-v2.jpg&apos;,
+       u&apos;thumbnailheight&apos;: u&apos;75&apos;,
+       u&apos;thumbnailwidth&apos;: u&apos;75&apos;},
+      u&apos;subtype&apos;: u&apos;thumbnail&apos;,
+      u&apos;type&apos;: u&apos;image&apos;,
+      u&apos;url&apos;: u&apos;images/2010/09/16/opinion/Krugman_New/Krugman_New-thumbStandard-v2.jpg&apos;,
+      u&apos;width&apos;: 75}],
+    u&apos;news_desk&apos;: u&apos;Editorial&apos;,
+    u&apos;print_page&apos;: u&apos;23&apos;,
+    u&apos;pub_date&apos;: u&apos;2013-01-04T00:00:00Z&apos;,
+    u&apos;section_name&apos;: u&apos;Opinion&apos;,
+    u&apos;snippet&apos;: u&apos;Let\u2019s put the cliff deal, which was part of a larger class war, in perspective.&apos;,
+    u&apos;source&apos;: u&apos;The New York Times&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;Op-Ed&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/2013/01/04/opinion/kurgman-battles-of-the-budget.html&apos;,
+    u&apos;word_count&apos;: u&apos;816&apos;},
+   {u&apos;_id&apos;: u&apos;50e68ee400315214fbb825a6&apos;,
+    u&apos;abstract&apos;: None,
+    u&apos;blog&apos;: [],
+    u&apos;byline&apos;: {u&apos;organization&apos;: u&apos;THE ASSOCIATED PRESS&apos;,
+     u&apos;original&apos;: u&apos;By THE ASSOCIATED PRESS&apos;,
+     u&apos;person&apos;: []},
+    u&apos;document_type&apos;: u&apos;article&apos;,
+    u&apos;headline&apos;: {u&apos;main&apos;: u&quot;Women&apos;s History Pioneer Gerda Lerner Dies at 92&quot;},
+    u&apos;keywords&apos;: [],
+    u&apos;lead_paragraph&apos;: u&apos;Gerda Lerner spent her 18th birthday in a Nazi prison, sharing a cell with two gentile women arrested for political work who shared their food with the Jewish teenager because jailers restricted rations for Jews.&apos;,
+    u&apos;multimedia&apos;: [],
+    u&apos;news_desk&apos;: u&apos;None&apos;,
+    u&apos;print_page&apos;: None,
+    u&apos;pub_date&apos;: u&apos;2013-01-04T03:07:26Z&apos;,
+    u&apos;section_name&apos;: u&apos;U.S.&apos;,
+    u&apos;snippet&apos;: u&apos;Gerda Lerner spent her 18th birthday in a Nazi prison, sharing a cell with two gentile women arrested for political work who shared their food with the Jewish teenager because jailers restricted rations for Jews.&apos;,
+    u&apos;source&apos;: u&apos;AP&apos;,
+    u&apos;subsection_name&apos;: None,
+    u&apos;type_of_material&apos;: u&apos;&apos;,
+    u&apos;web_url&apos;: u&apos;http://www.nytimes.com/aponline/2013/01/04/us/ap-us-obit-lerner.html&apos;,
+    u&apos;word_count&apos;: 835}],
+  u&apos;meta&apos;: {u&apos;hits&apos;: 1256, u&apos;offset&apos;: 0, u&apos;time&apos;: 36}},
+ u&apos;status&apos;: u&apos;OK&apos;}
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">json</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">json</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[7]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+[u&apos;status&apos;, u&apos;response&apos;, u&apos;copyright&apos;]
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
 </div><div class="fragment">
     
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">json</span><span class="p">[</span><span class="s">&#39;status&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[8]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+u&apos;OK&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Analysis</p>
-<ul>
-<li><a href="http://nltk.org">NLTK</a> Natural Language Toolkit. There's a <a href="http://nltk.org/book/">book</a></li>
-<li><a href="http://scikit-learn.org/stable/">scikit-learn</a> Machine learning</li>
-<li><a href="http://pandas.pydata.org">pandas</a> Data management and analysis</li>
-<li><a href="http://radimrehurek.com/gensim/">gensim</a> Topic modeling</li>
-<li><a href="http://networkx.github.io">NetworkX</a> Network analysis</li>
-<li><a href="http://www.numpy.org">NumPy</a> and <a href="http://scipy.org">scipy</a> Computational backbone</li>
-<li><a href="http://rpy.sourceforge.net">rpy</a> Python bindings for R</li>
-</ul>
+<p>Output from <code>json['response']</code> ommitted because it was really long.</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">json</span><span class="p">[</span><span class="s">&#39;response&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[9]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+[u&apos;docs&apos;, u&apos;meta&apos;]
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">json</span><span class="p">[</span><span class="s">&#39;response&#39;</span><span class="p">][</span><span class="s">&#39;meta&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+{u&apos;hits&apos;: 1256, u&apos;offset&apos;: 0, u&apos;time&apos;: 36}
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://api.nytimes.com/svc/search/v2/articlesearch.json?&#39;</span>
+
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">2007</span><span class="p">,</span> <span class="mi">2008</span><span class="p">,</span> <span class="mi">2009</span><span class="p">,</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">2011</span><span class="p">,</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">2013</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
+    <span class="n">year_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;q&#39;</span>         <span class="p">:</span> <span class="s">&#39;inequality&#39;</span><span class="p">,</span> 
+                <span class="s">&#39;begin_date&#39;</span><span class="p">:</span>  <span class="n">year_string</span> <span class="o">+</span> <span class="s">&#39;0101&#39;</span><span class="p">,</span>
+                <span class="s">&#39;end_date&#39;</span>  <span class="p">:</span>  <span class="n">year_string</span> <span class="o">+</span> <span class="s">&#39;1231&#39;</span><span class="p">,</span>
+                <span class="s">&#39;api-key&#39;</span>   <span class="p">:</span>  <span class="n">my_times_api_key</span><span class="p">,</span>
+                <span class="s">&#39;sort&#39;</span>      <span class="p">:</span> <span class="s">&#39;newest&#39;</span> <span class="p">,</span>
+                <span class="s">&#39;page&#39;</span>      <span class="p">:</span>  <span class="mi">0</span><span class="p">}</span>
+    
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">payload</span><span class="p">)</span>
+    <span class="n">json</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">count</span>  <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;response&#39;</span><span class="p">][</span><span class="s">&#39;meta&#39;</span><span class="p">][</span><span class="s">&#39;hits&#39;</span><span class="p">]</span>
+    <span class="k">print</span> <span class="n">year</span><span class="p">,</span> <span class="n">count</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+2006 231
+2007 298
+2008 258
+2009 235
+2010 338
+2011 674
+2012 1022
+2013 1256
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Writing a CSV file</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">outfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;inequality_annual.csv&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;year&#39;</span><span class="p">,</span><span class="s">&#39;article_count&#39;</span><span class="p">]</span>
+<span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://api.nytimes.com/svc/search/v2/articlesearch.json?&#39;</span>
+
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">2007</span><span class="p">,</span> <span class="mi">2008</span><span class="p">,</span> <span class="mi">2009</span><span class="p">,</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">2011</span><span class="p">,</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">2013</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
+    <span class="n">year_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;q&#39;</span>         <span class="p">:</span> <span class="s">&#39;inequality&#39;</span><span class="p">,</span> 
+                <span class="s">&#39;begin_date&#39;</span><span class="p">:</span>  <span class="n">year_string</span> <span class="o">+</span> <span class="s">&#39;0101&#39;</span><span class="p">,</span>
+                <span class="s">&#39;end_date&#39;</span>  <span class="p">:</span>  <span class="n">year_string</span> <span class="o">+</span> <span class="s">&#39;1231&#39;</span><span class="p">,</span>
+                <span class="s">&#39;api-key&#39;</span>   <span class="p">:</span>  <span class="n">my_times_api_key</span><span class="p">,</span>
+                <span class="s">&#39;sort&#39;</span>      <span class="p">:</span> <span class="s">&#39;newest&#39;</span> <span class="p">,</span>
+                <span class="s">&#39;page&#39;</span>      <span class="p">:</span>  <span class="mi">0</span><span class="p">}</span>
+    
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">payload</span><span class="p">)</span>
+    <span class="n">json</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">count</span>  <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;response&#39;</span><span class="p">][</span><span class="s">&#39;meta&#39;</span><span class="p">][</span><span class="s">&#39;hits&#39;</span><span class="p">]</span>
+    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">year</span><span class="p">,</span><span class="n">count</span><span class="p">])</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+    
+<span class="n">outfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="o">!</span>cat inequality.csv
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+year,article_count
+2006,231
+2007,298
+2008,258
+2009,235
+2010,338
+2011,674
+2012,1023
+2013,1256
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://api.nytimes.com/svc/search/v2/articlesearch.json?&#39;</span>
+
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;q&#39;</span>         <span class="p">:</span> <span class="s">&#39;inequality&#39;</span><span class="p">,</span> 
+            <span class="s">&#39;api-key&#39;</span>   <span class="p">:</span>  <span class="n">my_times_api_key</span><span class="p">,</span>
+            <span class="s">&#39;sort&#39;</span>      <span class="p">:</span> <span class="s">&#39;newest&#39;</span> <span class="p">,</span>
+            <span class="s">&#39;page&#39;</span>      <span class="p">:</span>  <span class="mi">0</span><span class="p">}</span>
+    
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">2007</span><span class="p">,</span> <span class="mi">2008</span><span class="p">,</span> <span class="mi">2009</span><span class="p">,</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">2011</span><span class="p">,</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">2013</span><span class="p">]</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
+    <span class="n">year_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s">&#39;begin_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">year_string</span> <span class="o">+</span> <span class="s">&#39;0101&#39;</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s">&#39;end_date&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">year_string</span> <span class="o">+</span> <span class="s">&#39;1231&#39;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">payload</span><span class="p">)</span>
+    <span class="n">json</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">count</span>  <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;response&#39;</span><span class="p">][</span><span class="s">&#39;meta&#39;</span><span class="p">][</span><span class="s">&#39;hits&#39;</span><span class="p">]</span>
+    <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>   
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This can be plotted in Python.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="o">%</span><span class="k">pylab</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">years</span><span class="p">,</span><span class="n">counts</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useOffset</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Populating the interactive namespace from numpy and matplotlib
+
+</pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<img src="data:image/png;base64,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
+QmCC
+">
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Your turn. Modify the script below to prints and output a csv that outputs the monthly total of inequality articles. For an extra challenge, add an additional column with the count of the number of &quot;unemployment&quot; articles.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://api.nytimes.com/svc/search/v2/articlesearch.json?&#39;</span>
+
+<span class="k">def</span> <span class="nf">last_day_calculator</span><span class="p">(</span><span class="n">month</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;A little function that tells you the last day of the month.&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">]:</span>
+        <span class="n">last_day</span> <span class="o">=</span> <span class="s">&#39;31&#39;</span>
+    <span class="k">elif</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">]:</span>
+        <span class="n">last_day</span> <span class="o">=</span> <span class="s">&#39;30&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">last_day</span> <span class="o">=</span> <span class="s">&#39;28&#39;</span>
+    <span class="k">return</span> <span class="n">last_day</span>
+
+
+<span class="c">#Loop through each year 2006-2013</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span><span class="mi">2014</span><span class="p">):</span>
+    <span class="c">#turn the interger into string</span>
+    <span class="n">year_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+    
+    <span class="c">#Loop through each month</span>
+    <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">):</span>
+        
+        <span class="c">#figure out the last day of that month</span>
+        <span class="n">last_day_string</span> <span class="o">=</span> <span class="n">last_day_calculator</span><span class="p">(</span><span class="n">month</span><span class="p">)</span>
+            
+        <span class="n">month_string</span> <span class="o">=</span>  <span class="s">&quot;</span><span class="si">%02d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">month</span>
+        <span class="k">print</span> <span class="n">year_string</span> <span class="o">+</span> <span class="n">month_string</span> <span class="o">+</span> <span class="n">last_day_string</span>
+        <span class="c">#your stuff goes here</span>
+        
+        
+        <span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+        
+       
+        
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+20060131
+20060228
+20060331
+20060430
+20060531
+20060630
+20060731
+20060831
+20060930
+20061031
+20061130
+20061228
+20070131
+20070228
+20070331
+20070430
+20070531
+20070630
+20070731
+20070831
+20070930
+20071031
+20071130
+20071228
+20080131
+20080228
+20080331
+20080430
+20080531
+20080630
+20080731
+20080831
+20080930
+20081031
+20081130
+20081228
+20090131
+20090228
+20090331
+20090430
+20090531
+20090630
+20090731
+20090831
+20090930
+20091031
+20091130
+20091228
+20100131
+20100228
+20100331
+20100430
+20100531
+20100630
+20100731
+20100831
+20100930
+20101031
+20101130
+20101228
+20110131
+20110228
+20110331
+20110430
+20110531
+20110630
+20110731
+20110831
+20110930
+20111031
+20111130
+20111228
+20120131
+20120228
+20120331
+20120430
+20120531
+20120630
+20120731
+20120831
+20120930
+20121031
+20121130
+20121228
+20130131
+20130228
+20130331
+20130430
+20130531
+20130630
+20130731
+20130831
+20130930
+20131031
+20131130
+20131228
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
 <div class="cell border-box-sizing code_cell vbox">

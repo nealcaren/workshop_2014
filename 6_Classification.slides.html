@@ -1734,143 +1734,42 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="neal-caren">Neal Caren</h3>
-<p>Department of Sociology<br />University of North Carolina, Chapel Hill<br />neal.caren@gmail.com<br /><span class="citation">@haphazardsoc</span></p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Winning makes us happy.<br /><img src="fb.png" /><br />by Sean J. Taylor (<span class="citation">@seanjtaylor</span>)</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Yelp can tell us how SES structures food options.</p>
-<p><img src="files\high_ses.png" /> <img src="files\mid_ses.png" /> <img src="files\low_ses.png" /></p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Or map who supports secession</p>
-<div class="figure">
-<img src="files\petitions.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="goals-for-today">Goals for today</h3>
-<p>Understand text collection and analysis in Python</p>
+<p>Classification with scikit learn</p>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>well enough so that you can Google your problems, find the answer, and implement it.</p>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="more-specifically">More specifically</h4>
 <ol style="list-style-type: decimal">
-<li>Up and running with IPython (1_Into)</li>
-<li>Understand a basic workflow (2_Twitter)</li>
-<li>Basics of Python and sentiment analysis (3_Sentiment)</li>
-<li>Collecting data from a website (4_Upworthy)</li>
-<li>Collecting data from an API (5_Times)</li>
-<li>Basic text ML with scikit-learn (6_classification)</li>
+<li>Load the data(s)</li>
+<li>Tranform variables</li>
+<li>Train the model</li>
+<li>Test the model</li>
+<li>Goto 2</li>
 </ol>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="why-python">Why Python</h4>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="figure">
-<img src="Stanford.jpg" />
-</div>
 </div>
     </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="setup">Setup</h4>
-<p>On your computer</p>
-<ul>
-<li><a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a></li>
-<li><a href="https://www.enthought.com/products/epd/">Enthought</a></li>
-<li><a href="http://www.python.org">Python</a></li>
-</ul>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">upworthy_titles</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;upworthy_titles.txt&#39;</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
 </div><div class="fragment">
     
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On the internet</p>
-<ul>
-<li><a href="https://wakari.io">Wakari</a></li>
-</ul>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="slides-and-code-for-today">Slides and Code for Today</h4>
-<p>Links to get them on the internet</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="getting-yourself-setup">Getting yourself setup</h4>
-<p>On a Mac</p>
-<div class="figure">
-<img src="on_a_mac.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On Windows</p>
-<div class="figure">
-<img src="windows.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ipython-notebooks-are-what-all-the-cool-kids-use.">Ipython Notebooks are what all the cool kids use.</h4>
-<div class="figure">
-<img src="first_screen.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="a-new-notebook">A new notebook</h4>
-<div class="figure">
-<img src="new_workbook.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Cells can be Markdown (like this one) or code</p>
-<div class="figure">
-<img src="files\cell_types.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="to-start-off-with">To start off with</h4>
-<p>Make sure you hit <code>Shift-Enter</code> or <code>Ctrl-Enter</code> when you are done.</p>
-</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<div class="highlight"><pre><span class="n">upworthy_titles</span><span class="p">[:</span><span class="mi">500</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -1886,7 +1785,147 @@ In&nbsp;[3]:
 
 
 <pre>
-4
+&quot;5 Reasons Why My Girlfriend Thinks She&apos;s Not Beautiful Enough, No Matter What Anyone Tells Her\nThe Perfect Reply A Girl Can Give To The Question &apos;What&apos;s Your Favorite Position?&apos;\nWhen A Simple Idea Like This Actually Works And It Helps People Get By, Everybody Wins\nOne Of The Biggest Lies We\xe2\x80\x99re Encouraged To Tell Ourselves About Our Value To Society Is Right Here\nHe Was About To Take His Own Life \xe2\x80\x94 Until A Man Stopped Him. Here He Meets Him Face To Face Again.\nWhen I Was A Kid, An Ad Aired On&quot;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I hate unicode</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>20 minutes of Googling later</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">upworthy_titles</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;upworthy_titles.txt&#39;</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">upworthy_titles</span> <span class="o">=</span> <span class="n">upworthy_titles</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">upworthy_titles</span> <span class="o">=</span> <span class="n">upworthy_titles</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="s">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">upworthy_titles</span><span class="p">)</span>
+
+<span class="n">upworthy_titles</span><span class="p">[:</span><span class="mi">500</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+56210
+
+</pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[7]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&quot;5 Reasons Why My Girlfriend Thinks She&apos;s Not Beautiful Enough, No Matter What Anyone Tells Her\nThe Perfect Reply A Girl Can Give To The Question &apos;What&apos;s Your Favorite Position?&apos;\nWhen A Simple Idea Like This Actually Works And It Helps People Get By, Everybody Wins\nOne Of The Biggest Lies Were Encouraged To Tell Ourselves About Our Value To Society Is Right Here\nHe Was About To Take His Own Life  Until A Man Stopped Him. Here He Meets Him Face To Face Again.\nWhen I Was A Kid, An Ad Aired On TV Th&quot;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">upworthy_titles</span> <span class="o">=</span> <span class="n">upworthy_titles</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">upworthy_titles</span><span class="p">)</span>
+
+<span class="n">upworthy_titles</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+693
+
+</pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[8]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+[&quot;5 Reasons Why My Girlfriend Thinks She&apos;s Not Beautiful Enough, No Matter What Anyone Tells Her&quot;,
+ &quot;The Perfect Reply A Girl Can Give To The Question &apos;What&apos;s Your Favorite Position?&apos;&quot;,
+ &apos;When A Simple Idea Like This Actually Works And It Helps People Get By, Everybody Wins&apos;,
+ &apos;One Of The Biggest Lies Were Encouraged To Tell Ourselves About Our Value To Society Is Right Here&apos;,
+ &apos;He Was About To Take His Own Life  Until A Man Stopped Him. Here He Meets Him Face To Face Again.&apos;,
+ &quot;When I Was A Kid, An Ad Aired On TV That I Didn&apos;t Fully Get. Now, I Want Us All To Watch It Again.&quot;,
+ &quot;These Parents Think It Might Be A Phase, But They Just Don&apos;t Understand What It Means&quot;,
+ &apos;How China Deals With Internet-Addicted Teens Is Kind Of Shocking. And Maybe A Good Idea?&apos;,
+ &apos;If You Want A Successful Long-Term Relationship (Of Any Kind), Here Are 3 Invaluable Things To Know&apos;,
+ &apos;How Do You Know If You Have Depression? Hear This Woman Explain How She Found Out.&apos;,
+ &quot;If You Ever Wanted The Great Novels Explained To You By Your Thug Friend, Now&apos;s Your Chance&quot;,
+ &quot;Seems Like Any Other High School, Right? So What&apos;s The Major Thing Missing From These Pictures?&quot;,
+ &apos;Every Person On Earth Is Supposed To Have These. But What Are They Exactly?&apos;,
+ &apos;Jon Stewart Delivers One Of The Best Interviews In Recent Memory&apos;,
+ &apos;If You Give A Bride A Beautiful Set Of Bone China, You Set Her Table For A Day&apos;,
+ &apos;A High School In A Poor Neighborhood Closed Down. These Folks Reopened It And Kicked Some Butt. How?&apos;,
+ &apos;The Super Bowl Ad That You Should See If You Think Little Girls Can Become Epic Rocket Scientists&apos;,
+ &quot;The NFL Would Never Let This Ad Air On The Super Bowl, So We&apos;re Gonna Show You It. It&apos;s Important.&quot;,
+ &apos;The Simple Way A Developing Country Managed To Decrease The Number Of Babies Who Died By Almost 30%&apos;,
+ &apos;When Theres Nothing Scarier Than A Room Full Of White Men Laughing&apos;]
 </pre>
 
 </div>
@@ -1898,30 +1937,944 @@ In&nbsp;[3]:
 </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="frequently-used-python-packages">Frequently used Python Packages</h4>
-<p>Data aquisition</p>
-<ul>
-<li><a href="http://docs.python-requests.org/en/latest/">requests</a> Web scraping</li>
-<li><a href="http://wwwsearch.sourceforge.net/mechanize/">mechanize</a> Web scraping</li>
-<li><a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> HTML cleaning</li>
-<li><a href="http://tweepy.github.io">Tweepy</a> Access to Twitter API</li>
-<li><a href="http://developer.marvel.com">Marvel Comics</a> Access to Marvel Universe</li>
-<li><a href="https://dataset.readthedocs.org/en/latest/">database</a> Relational database/SQL</li>
-</ul>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">times_titles</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;times_titles.txt&#39;</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">times_titles</span> <span class="o">=</span> <span class="n">times_titles</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">times_titles</span> <span class="o">=</span> <span class="n">times_titles</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="s">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="n">times_titles</span> <span class="o">=</span> <span class="n">times_titles</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Analysis</p>
-<ul>
-<li><a href="http://nltk.org">NLTK</a> Natural Language Toolkit. There's a <a href="http://nltk.org/book/">book</a></li>
-<li><a href="http://scikit-learn.org/stable/">scikit-learn</a> Machine learning</li>
-<li><a href="http://pandas.pydata.org">pandas</a> Data management and analysis</li>
-<li><a href="http://radimrehurek.com/gensim/">gensim</a> Topic modeling</li>
-<li><a href="http://networkx.github.io">NetworkX</a> Network analysis</li>
-<li><a href="http://www.numpy.org">NumPy</a> and <a href="http://scipy.org">scipy</a> Computational backbone</li>
-<li><a href="http://rpy.sourceforge.net">rpy</a> Python bindings for R</li>
-</ul>
+<p>I might think about wrapping this in a function</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">import_titles</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; Imports text file, </span>
+<span class="sd">        cleans up some unicode mess, and </span>
+<span class="sd">        splits by line. &#39;&#39;&#39;</span>
+    <span class="n">titles</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="n">titles</span> <span class="o">=</span> <span class="n">titles</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">titles</span> <span class="o">=</span> <span class="n">titles</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="s">&#39;ignore&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">times_titles</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What we want the data to look like next</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">upworthy</th>
+<th align="center">titles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center">He Was About To Take His Own Life — Until A Man Stopped Him. Here He Meets Him Face To Face Again</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="center">CVS Pharmacy to Stop Selling Tobacco Goods by October</td>
+</tr>
+<tr class="odd">
+<td align="left">0</td>
+<td align="center">Twitter’s Share Price Falls After It Reports a Loss</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="center">A 16-Year-Old Explains Why Everything You Thought You Knew About Beauty May Be Wrong. With Math.</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#Set up placehold lists</span>
+<span class="n">upworthy</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">titles</span>   <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c">#Go through all the upworthy articles</span>
+<span class="k">for</span> <span class="n">title</span> <span class="ow">in</span> <span class="n">upworthy_titles</span><span class="p">:</span>
+    <span class="c">#add title to title list</span>
+    <span class="n">titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="c">#add 1 to Y list</span>
+    <span class="n">upworthy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">title</span> <span class="ow">in</span> <span class="n">times_titles</span><span class="p">:</span>
+    <span class="n">titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">upworthy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>   
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">upworthy</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">upworthy</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+1193
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">titles</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">titles</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+1193
+[&quot;5 Reasons Why My Girlfriend Thinks She&apos;s Not Beautiful Enough, No Matter What Anyone Tells Her&quot;, &quot;The Perfect Reply A Girl Can Give To The Question &apos;What&apos;s Your Favorite Position?&apos;&quot;, &apos;When A Simple Idea Like This Actually Works And It Helps People Get By, Everybody Wins&apos;, &apos;One Of The Biggest Lies Were Encouraged To Tell Ourselves About Our Value To Society Is Right Here&apos;, &apos;He Was About To Take His Own Life  Until A Man Stopped Him. Here He Meets Him Face To Face Again.&apos;, &quot;When I Was A Kid, An Ad Aired On TV That I Didn&apos;t Fully Get. Now, I Want Us All To Watch It Again.&quot;, &quot;These Parents Think It Might Be A Phase, But They Just Don&apos;t Understand What It Means&quot;, &apos;How China Deals With Internet-Addicted Teens Is Kind Of Shocking. And Maybe A Good Idea?&apos;, &apos;If You Want A Successful Long-Term Relationship (Of Any Kind), Here Are 3 Invaluable Things To Know&apos;, &apos;How Do You Know If You Have Depression? Hear This Woman Explain How She Found Out.&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">min_df</span>        <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
+                             <span class="n">ngram_range</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                             <span class="n">stop_words</span>    <span class="o">=</span> <span class="s">&#39;english&#39;</span><span class="p">,</span> 
+                             <span class="n">strip_accents</span> <span class="o">=</span> <span class="s">&#39;unicode&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">vectorizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">titles</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[17]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+CountVectorizer(analyzer=u&apos;word&apos;, binary=False, charset=None,
+        charset_error=None, decode_error=u&apos;strict&apos;,
+        dtype=&lt;type &apos;numpy.int64&apos;&gt;, encoding=u&apos;utf-8&apos;, input=u&apos;content&apos;,
+        lowercase=True, max_df=1.0, max_features=None, min_df=2,
+        ngram_range=(1, 1), preprocessor=None, stop_words=&apos;english&apos;,
+        strip_accents=&apos;unicode&apos;, token_pattern=u&apos;(?u)\\b\\w\\w+\\b&apos;,
+        tokenizer=None, vocabulary=None)
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">titles</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">MultinomialNB</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[23]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">clf</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[24]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">upworthy</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[24]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[43]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">y_hat</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[44]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">y_hat</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[44]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How many correctly predicted?</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[45]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">upworthy</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[45]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+0.91701592623637884
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[42]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[46]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">upworthy</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[46]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([[416,  84],
+       [ 15, 678]])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[27]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([[-6.71921442, -6.31374931, -7.81782671, ..., -7.12467953,
+        -7.4123616 , -7.4123616 ]])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[28]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[28]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+1192
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[29]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+1192
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[32]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">coefficients</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">,</span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">coefficients</span> <span class="o">=</span> <span class="p">{</span><span class="n">h</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="n">h</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">coefficients</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">coefficients</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">coefficients</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)[:</span><span class="mi">20</span><span class="p">]:</span>
+    <span class="k">print</span> <span class="n">word</span><span class="p">,</span><span class="n">coefficients</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+nocturnalist -4.55973017302
+rest -4.63977288069
+columnist -4.70431140183
+debate -5.01446633014
+drunk -5.01446633014
+biggest -5.01446633014
+industry -5.14367806162
+nato -5.17876938143
+severe -5.17876938143
+need -5.2151370256
+rebels -5.2151370256
+disposing -5.29209806673
+weeks -5.33292006125
+learning -5.33292006125
+head -5.33292006125
+bump -5.37547967567
+abortions -5.46645145388
+world -5.46645145388
+million -5.51524161805
+000 -5.51524161805
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[49]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">cross_validation</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[50]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">cross_validation</span><span class="o">.</span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">upworthy</span><span class="p">),</span>  <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[50]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([ 0.81666667,  0.81666667,  0.86666667,  0.79831933,  0.81512605,
+        0.83193277,  0.84033613,  0.79831933,  0.77310924,  0.85714286])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[52]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">cross_validation</span><span class="o">.</span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">upworthy</span><span class="p">),</span>  <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[52]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+0.8214285714285714
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[54]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">upworthy</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[55]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[56]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="s">&quot;classification accuracy:&quot;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+classification accuracy: 0.917365269461
+
+</pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[56]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([[289,  61],
+       [  8, 477]])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[57]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="s">&quot;classification accuracy:&quot;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+classification accuracy: 0.840782122905
+
+</pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[57]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([[107,  43],
+       [ 14, 194]])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What about a new headline?</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[67]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">soc_title</span> <span class="o">=</span> <span class="s">&#39;Educational Assortative Mating and Earnings Inequality in the United States&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[68]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">soc_title_vector</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">([</span><span class="n">soc_title</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[69]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">soc_title_vector</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[69]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([0])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[70]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">gawker_title</span> <span class="o">=</span> <span class="s">&#39;Shocking Footage Aired of Police Shooting Face-Eating Nude Man&#39;</span>
+<span class="n">gawker_title_vector</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">([</span><span class="n">gawker_title</span><span class="p">])</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">gawker_title_vector</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[70]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([1])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Your turn. Take the file <code>abstracts.csv</code> has 3,232 abstracts, divided evenly between those that were published in sociology journals and those that were presented at the ASAs.</p>
+<p>After importing the data, develop a model that categorizes each, without overfitting.</p>
+<p>Note: Copy and pasting code is your friend!!!</p>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Make a prediction for:</p>
+<p>This article investigates how changes in educational assortative mating affected the growth in earnings inequality among households in the United States between the late 1970s and early 2000s. The authors find that these changes had a small, negative effect on inequality: there would have been more inequality in earnings in the early 2000s if educational assortative mating patterns had remained as they were in the 1970s. Given the educational distribution of men and women in the United States, educational assortative mating can have only a weak impact on inequality, and educational sorting among partners is a poor proxy for sorting on earnings.</p>
 </div>
     </div>
 <div class="cell border-box-sizing code_cell vbox">

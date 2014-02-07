@@ -1734,143 +1734,142 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="neal-caren">Neal Caren</h3>
-<p>Department of Sociology<br />University of North Carolina, Chapel Hill<br />neal.caren@gmail.com<br /><span class="citation">@haphazardsoc</span></p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Winning makes us happy.<br /><img src="fb.png" /><br />by Sean J. Taylor (<span class="citation">@seanjtaylor</span>)</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Yelp can tell us how SES structures food options.</p>
-<p><img src="files\high_ses.png" /> <img src="files\mid_ses.png" /> <img src="files\low_ses.png" /></p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Or map who supports secession</p>
-<div class="figure">
-<img src="files\petitions.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="goals-for-today">Goals for today</h3>
-<p>Understand text collection and analysis in Python</p>
-</div><div class="fragment">
+<h4 id="your-mission">Your mission:</h4>
+<p>Figure out what this uncommented code is doing.</p>
+</div><div style=display:none>
     
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>well enough so that you can Google your problems, find the answer, and implement it.</p>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="kn">from</span> <span class="nn">twitter</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+
+</div>
+</div>
+
 </div>
     </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="more-specifically">More specifically</h4>
-<ol style="list-style-type: decimal">
-<li>Up and running with IPython (1_Into)</li>
-<li>Understand a basic workflow (2_Twitter)</li>
-<li>Basics of Python and sentiment analysis (3_Sentiment)</li>
-<li>Collecting data from a website (4_Upworthy)</li>
-<li>Collecting data from an API (5_Times)</li>
-<li>Basic text ML with scikit-learn (6_classification)</li>
-</ol>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="why-python">Why Python</h4>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="figure">
-<img src="Stanford.jpg" />
-</div>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="setup">Setup</h4>
-<p>On your computer</p>
-<ul>
-<li><a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a></li>
-<li><a href="https://www.enthought.com/products/epd/">Enthought</a></li>
-<li><a href="http://www.python.org">Python</a></li>
-</ul>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On the internet</p>
-<ul>
-<li><a href="https://wakari.io">Wakari</a></li>
-</ul>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="slides-and-code-for-today">Slides and Code for Today</h4>
-<p>Links to get them on the internet</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="getting-yourself-setup">Getting yourself setup</h4>
-<p>On a Mac</p>
-<div class="figure">
-<img src="on_a_mac.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On Windows</p>
-<div class="figure">
-<img src="windows.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ipython-notebooks-are-what-all-the-cool-kids-use.">Ipython Notebooks are what all the cool kids use.</h4>
-<div class="figure">
-<img src="first_screen.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="a-new-notebook">A new notebook</h4>
-<div class="figure">
-<img src="new_workbook.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Cells can be Markdown (like this one) or code</p>
-<div class="figure">
-<img src="files\cell_types.png" />
-</div>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="to-start-off-with">To start off with</h4>
-<p>Make sure you hit <code>Shift-Enter</code> or <code>Ctrl-Enter</code> when you are done.</p>
-</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<div class="highlight"><pre><span class="n">consumer_key</span>        <span class="o">=</span> <span class="s">&#39;vIdNIV4AYVW0E47ipzUeg&#39;</span>
+<span class="n">consumer_secret</span>     <span class="o">=</span> <span class="s">&#39;IY1Nzu13fN3ki0QVx8wbdnlwMql20WnGWvy7fjZY0&#39;</span>
+<span class="n">access_token</span>        <span class="o">=</span> <span class="s">&#39;730945789-j2Ju2nnZoxHBXUPcZaUb0orLtj7WTSHAJvirvQDd&#39;</span>
+<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s">&#39;SKU4jKEiYeoR4Twxm7vQlYvTk3Rpv45i7li3vWBo&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">max_id</span> <span class="o">=</span> <span class="mi">2327203915</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">make_random_id_numbers</span><span class="p">(</span><span class="n">list_size</span><span class="p">):</span>
+    <span class="n">random_integers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">max_id</span><span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">list_size</span><span class="p">)]</span>
+    <span class="n">random_integers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">random_integers</span><span class="p">]</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">numbers</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">twitter_client</span> <span class="o">=</span>   <span class="n">Twitter</span><span class="p">(</span><span class="n">auth</span><span class="o">=</span><span class="n">OAuth</span><span class="p">(</span><span class="n">access_token</span><span class="p">,</span> 
+                           <span class="n">access_token_secret</span><span class="p">,</span>
+                           <span class="n">consumer_key</span><span class="p">,</span> 
+                           <span class="n">consumer_secret</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">user_database</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">sample_number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
+    
+    <span class="n">numbers</span> <span class="o">=</span> <span class="n">make_random_id_numbers</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    
+    <span class="n">sample_user_information</span> <span class="o">=</span> <span class="n">twitter_client</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">user_id</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">)</span>
+    
+    <span class="n">user_database</span> <span class="o">=</span> <span class="n">user_database</span> <span class="o">+</span> <span class="n">sample_user_information</span>
+    
+    <span class="k">print</span> <span class="n">sample_number</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1880,14 +1879,570 @@ In&nbsp;[3]:
 <div class="output vbox">
 
 
-<div class="hbox output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
-<div class="box-flex1 output_subarea output_pyout">
-
-
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
+1
+2
+3
 4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hint: Twitter calls a tweet a <em>status</em></p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">registered_user_count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">ever_tweeted_count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">this_year_count</span>    <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">user_database</span><span class="p">:</span>
+    <span class="n">registered_user_count</span> <span class="o">=</span> <span class="n">registered_user_count</span> <span class="o">+</span> <span class="mi">1</span> 
+    
+    <span class="k">if</span> <span class="s">&#39;status&#39;</span> <span class="ow">in</span> <span class="n">user</span><span class="p">:</span>
+        <span class="n">ever_tweeted_count</span> <span class="o">=</span> <span class="n">ever_tweeted_count</span> <span class="o">+</span> <span class="mi">1</span>
+        
+        <span class="k">if</span> <span class="s">&#39;2014&#39;</span> <span class="ow">in</span> <span class="n">user</span><span class="p">[</span><span class="s">&#39;status&#39;</span><span class="p">][</span><span class="s">&#39;created_at&#39;</span><span class="p">]:</span>
+            <span class="n">this_year_count</span> <span class="o">=</span> <span class="n">this_year_count</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">registered_user_count</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+4042
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">ever_tweeted_count</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+2029
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">this_year_count</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+494
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">percent_valid</span> <span class="o">=</span> <span class="n">registered_user_count</span> <span class="o">/</span> <span class="p">(</span><span class="n">sample_number</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">percent_valid</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+0.408282828283
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">estimated_user_total</span> <span class="o">=</span> <span class="n">percent_valid</span> <span class="o">*</span> <span class="n">max_id</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;How many accounts have been set up?&#39;</span>
+<span class="k">print</span> <span class="n">estimated_user_total</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+How many accounts have been set up?
+950157396.407
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;How many people have ever tweeted?&#39;</span>
+<span class="k">print</span> <span class="n">ever_tweeted_count</span> <span class="o">/</span> <span class="n">registered_user_count</span> <span class="o">*</span> <span class="n">estimated_user_total</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+How many people have ever tweeted?
+476959267.024
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;How many people have tweeted in 2014?&#39;</span>
+<span class="k">print</span> <span class="n">this_year_count</span> <span class="o">/</span> <span class="n">registered_user_count</span> <span class="o">*</span> <span class="n">estimated_user_total</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+How many people have tweeted in 2014?
+116125124.647
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;How many people have tweeted in 2014?&#39;</span>
+<span class="k">print</span> <span class="s">&#39;{:,.0f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">this_year_count</span> <span class="o">/</span> <span class="n">registered_user_count</span> <span class="o">*</span> <span class="n">estimated_user_total</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+How many people have tweeted in 2014?
+116,125,125
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="n">user</span><span class="p">[</span><span class="s">&#39;created_at&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">user_database</span> <span class="k">if</span> <span class="s">&#39;status&#39;</span> <span class="ow">in</span> <span class="n">user</span><span class="p">]</span>
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span> <span class="k">if</span> <span class="n">year</span> <span class="o">!=</span> <span class="s">&#39;2014&#39;</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">years</span><span class="p">))</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useOffset</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<img src="data:image/png;base64,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
+knT77bfrlVde0Xe+8x3df//9WrhwoW655ZZElnxdJtvfjexm7k1yrr/BwUFVVFRo8+bN8vl8Cah0
+Ypzq7w9/+IO6u7v18ccfq6amZtRlHQv/S5cuqaysTOvXr9fatWslffKN1dPTI0nq7u5WWlqapKsv
+BOvs7JTH44k/f++99zQ4OKiCggKnyps0J/o7evSoFi5cqIULF0qSvv3tb+vgwYNT3Mm1OfX+ffOb
+39Tbb7+tgwcPKjs7Wzk5OVPcybVdT3+fx+PxqLOzM/78ys9tsjjR243Myf6+973vKScnR08//XTC
+6r1eTr9/X/jCF1RWVqbDhw+Pupwj4W+M0caNG+X3+/XMM8/EXy8tLY1/+9TU1MQbKy0tVW1trQYG
+BtTR0aHjx4+rsLAwvt7evXu1bt06J0pzhFP93X333frXv/6l06dPS5L27dsnv98/9Q1dwcn37z//
++Y8k6ezZs3rllVf0xBNPTHE3V7ve/j673mfNnz9fs2fP1qFDh2SM0Z49e65aZ6o51duNysn+fvzj
+H+vcuXP6xS9+kdiir4NT/V24cEHd3d2SPvnr5rXXXhv74HniP03834EDB4zL5TLLli0z+fn5Jj8/
+37zxxhvmzJkzpri42GRlZZlAIGDOnj0bX+enP/2pycjIMDk5Oaa5uXnE9u6++25z7NgxJ0pzhJP9
+1dTUmLy8PLN06VJTWlpqent7k9HSCE72V1FRYfx+v/H7/aauri4Z7VxlIv195StfMXPmzDEzZ840
+Xq/XHD161BhjzF//+leTl5dnMjIyzFNPPZWsluKc7O25554zXq/X3HLLLcbr9ZqXXnopWW3FOdVf
+JBIxLpfL+P3++Haqq6uT2NknnOovFouZ5cuXm6VLl5olS5aYH/7wh2Z4eHjUfXORFwBYiH/GEQAs
+RPgDgIUIfwCwEOEPABYi/AHAQoQ/AFiI8AcACxH+AGCh/wHpYX0FQ1aR0wAAAABJRU5ErkJggg==
+">
 
 </div>
 </div>
@@ -1898,40 +2453,145 @@ In&nbsp;[3]:
 </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="frequently-used-python-packages">Frequently used Python Packages</h4>
-<p>Data aquisition</p>
-<ul>
-<li><a href="http://docs.python-requests.org/en/latest/">requests</a> Web scraping</li>
-<li><a href="http://wwwsearch.sourceforge.net/mechanize/">mechanize</a> Web scraping</li>
-<li><a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> HTML cleaning</li>
-<li><a href="http://tweepy.github.io">Tweepy</a> Access to Twitter API</li>
-<li><a href="http://developer.marvel.com">Marvel Comics</a> Access to Marvel Universe</li>
-<li><a href="https://dataset.readthedocs.org/en/latest/">database</a> Relational database/SQL</li>
-</ul>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Analysis</p>
-<ul>
-<li><a href="http://nltk.org">NLTK</a> Natural Language Toolkit. There's a <a href="http://nltk.org/book/">book</a></li>
-<li><a href="http://scikit-learn.org/stable/">scikit-learn</a> Machine learning</li>
-<li><a href="http://pandas.pydata.org">pandas</a> Data management and analysis</li>
-<li><a href="http://radimrehurek.com/gensim/">gensim</a> Topic modeling</li>
-<li><a href="http://networkx.github.io">NetworkX</a> Network analysis</li>
-<li><a href="http://www.numpy.org">NumPy</a> and <a href="http://scipy.org">scipy</a> Computational backbone</li>
-<li><a href="http://rpy.sourceforge.net">rpy</a> Python bindings for R</li>
-</ul>
-</div>
-    </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[21]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre>
+<div class="highlight"><pre><span class="n">years_eng</span> <span class="o">=</span> <span class="p">[</span><span class="n">user</span><span class="p">[</span><span class="s">&#39;created_at&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">user_database</span>  <span class="k">if</span> <span class="s">&#39;en&#39;</span> <span class="ow">in</span> <span class="n">user</span><span class="p">[</span><span class="s">&#39;lang&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="s">&#39;status&#39;</span> <span class="ow">in</span> <span class="n">user</span><span class="p">]</span>
+<span class="n">years_eng</span>   <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_eng</span> <span class="k">if</span> <span class="n">year</span> <span class="o">!=</span> <span class="s">&#39;2014&#39;</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">years_eng</span><span class="p">))</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">years_eng</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">years_eng</span><span class="p">))</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">useOffset</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<img src="data:image/png;base64,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
+d7cWL16smpqaZJc9bpPpT5K++MUv6uWXX9b3v/99ffOb39SCBQt02223JbPkGzLZ/m5mt3JvknP9
+DQ4OqrKyUps2bZLP50tCpRPjVH9//etf1dPTo08//VThcHjUdR0L/4sXL6q8vFzr16/X2rVrJV36
+xurt7ZUk9fT0KCMjQ9L1F4J1dXXJ4/EkXr/77rsaHBxUYWGhU+VNmhP9HT16VAsWLNCCBZfuPPW9
+731PBw4cmOJORubU5/ed73xHBw8e1IEDB5Sbm6u8vLwp7mRkN9LfZ/F4POrq6kq8vvbnNlWc6O1m
+5mR/P/zhD5WXl6cnn3wyafXeKKc/v8997nMqLy/X4cOHR13PkfA3xmjjxo3y+/166qmnEu+XlZUl
+vn3C4XCisbKyMtXX12tgYEAdHR06fvy4ioqKEtvt2rVL69atc6I0RzjV3913363//Oc/OnXqlCRp
+z5498vv9U9/QNZz8/P773/9Kks6cOaOXX35Zjz322BR3c70b7e/q7a42b948zZ49W4cOHZIxRjt3
+7rxum6nmVG83Kyf7+/nPf66zZ8/qxRdfTG7RN8Cp/s6fP6+enh5Jl/538+qrr4598DzxX038v/37
+9xuXy2WWLl1qli1bZpYtW2Zef/11c/r0aVNSUmJycnJMIBAwZ86cSWzzq1/9ymRlZZm8vDzT0tIy
+bLy7777bHDt2zInSHOFkf+Fw2BQUFJglS5aYsrIy09fXl4qWhnGyv8rKSuP3+43f7zcNDQ2paOc6
+E+nvq1/9qpkzZ46ZOXOm8Xq95ujRo8YYY/75z3+agoICk5WVZZ544olUtZTgZG/PPPOM8Xq95rbb
+bjNer9f84he/SFVbCU7119nZaVwul/H7/Ylx6urqUtjZJU71F4vFzPLly82SJUvM4sWLzU9/+lMT
+j8dH3TcXeQGAhfgzjgBgIcIfACxE+AOAhQh/ALAQ4Q8AFiL8AcBChD8AWIjwBwAL/R83qQu493YR
+kQAAAABJRU5ErkJggg==
+">
+
+</div>
+</div>
 
 </div>
 </div>
