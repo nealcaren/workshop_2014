@@ -2088,7 +2088,9 @@ In&nbsp;[18]:
 </div>
 
 </div>
-    </div>
+    </div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can add things to the list with <code>append</code>.</p>
 </div>
@@ -2228,7 +2230,22 @@ In&nbsp;[23]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Your turn.</p>
 <p>Make a list callled <code>negative_words</code> that includes awful, lame, horrible and bad. <code>print</code> out the contents.</p>
-</div><div class="fragment">
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -2441,7 +2458,7 @@ In&nbsp;[29]:
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="most-of-the-fun-math-is-in-numpy-but-we-can-count-the-length-of-objects.">Most of the fun math is in <code>numpy</code> but we can count the length of objects.</h3>
+<h4 id="most-of-the-fun-math-is-in-numpy-but-we-can-count-the-length-of-objects.">Most of the fun math is in <code>numpy</code> but we can count the length of objects.</h4>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -2475,10 +2492,30 @@ In&nbsp;[30]:
 
 </div><div class="fragment">
     
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How long is tweet?</p>
+</div>
+    </div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[31]:
+In&nbsp;[91]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[92]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">tweet</span> 
@@ -2495,19 +2532,19 @@ In&nbsp;[31]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-We have some delightful new food in the cafeteria. Awesome!!!
+RT @SoCalConservtiv: His failed budget proposal that was voted down 414-0 in Congress... Oh wait that&apos;s Professor Obama #WhatsRomneyHiding #tcot
 
 </pre>
 </div>
 </div>
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[31]:</div>
+    Out[92]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
-61
+144
 </pre>
 
 </div>
@@ -2737,7 +2774,9 @@ Awesome!!!
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note the colon at the end of the first line. Python will expect the next line to be indented.</p>
 </div>
-    </div>
+    </div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can also add conditionals, like <code>if</code> and <code>else</code> or <code>elif</code>.</p>
 </div>
@@ -3559,14 +3598,15 @@ In&nbsp;[55]:
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>LIWC is what all the cool kids use, but there list is copyrighted. So we'll use [citation needed].</p>
+<p>LIWC is what all the cool kids use, but there list is copyrighted. So we'll use lists of positive and negative words from:</p>
+<p>Theresa Wilson, Janyce Wiebe and Paul Hoffmann (2005). &quot;Recognizing Contextual Polarity in Phrase-Level Sentiment Analysis.&quot; Proceedings of HLT/EMNLP 2005, Vancouver, Canada.</p>
 </div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[56]:
+In&nbsp;[95]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">negative_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;negative.txt&#39;</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -4321,7 +4361,7 @@ In&nbsp;[76]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[77]:
+In&nbsp;[94]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">clean_split</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
@@ -4330,13 +4370,13 @@ In&nbsp;[77]:
 
 <span class="c">#turn the lists into sets so we can do intersections</span>
 <span class="n">postive_set</span>  <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">postive_list</span><span class="p">)</span>
-<span class="n">negative_se</span> <span class="n">t</span><span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">negative_list</span><span class="p">)</span>
+<span class="n">negative_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">negative_list</span><span class="p">)</span>
 
 
 <span class="n">sentiment</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">obama_tweets</span><span class="p">:</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">clean_split</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
-    <span class="n">postive_counter</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span> <span class="n">postive_set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">postive_counter</span> <span class="o">=</span>  <span class="nb">len</span><span class="p">(</span> <span class="n">postive_set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="p">)</span>
     <span class="n">negative_counter</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span> <span class="n">negative_set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="p">)</span>
     <span class="n">sentiment</span><span class="o">.</span><span class="n">append</span> <span class="p">(</span> <span class="p">[</span> <span class="n">postive_counter</span> <span class="p">,</span> <span class="n">negative_counter</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)]</span> <span class="p">)</span>
 
@@ -4348,26 +4388,14 @@ In&nbsp;[77]:
 </div>
 </div>
 
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_pyerr">
-<pre>
-<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-77-e1967b60931d&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">7</span>
-<span class="ansired">    negative_se t= set(negative_list)</span>
-                ^
-<span class="ansired">SyntaxError</span><span class="ansired">:</span> invalid syntax
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And that's the basics of Python.</p>
+<p>-- Swap</p>
+</div></section>
     </section>
 </div>
 </div>
