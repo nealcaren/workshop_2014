@@ -1739,20 +1739,24 @@ text-align: inherit;
     
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol style="list-style-type: decimal">
-<li>Load the data(s)</li>
+<li>Load the data</li>
 <li>Tranform variables</li>
+<li>Select model and parameters</li>
 <li>Train the model</li>
 <li>Test the model</li>
-<li>Goto 2</li>
+<li>GOTO 2</li>
 </ol>
 </div>
     </div></section>
     </section><section>
     <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Input our data from before</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[4]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">upworthy_titles</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;upworthy_titles.txt&#39;</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -1766,7 +1770,7 @@ In&nbsp;[1]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">upworthy_titles</span><span class="p">[:</span><span class="mi">500</span><span class="p">]</span>
@@ -1780,7 +1784,7 @@ In&nbsp;[3]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
+    Out[5]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -1810,7 +1814,7 @@ In&nbsp;[3]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[6]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">upworthy_titles</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;upworthy_titles.txt&#39;</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -2108,7 +2112,81 @@ In&nbsp;[13]:
 </div>
 
 </div>
-    </div></section>
+    </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What we want the data to look like next</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">upworthy</th>
+<th align="center">stop</th>
+<th align="center">man</th>
+<th align="center">obama</th>
+<th align="center">explain</th>
+<th align="center">everything</th>
+<th align="center">you</th>
+<th align="center">nato</th>
+<th align="center">debate</th>
+<th align="center">industry</th>
+<th align="center">believe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+</div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
@@ -2128,7 +2206,7 @@ In&nbsp;[14]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[15]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">min_df</span>        <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
@@ -2146,7 +2224,7 @@ In&nbsp;[16]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[17]:
+In&nbsp;[16]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">vectorizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">titles</span><span class="p">)</span>
@@ -2160,7 +2238,7 @@ In&nbsp;[17]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[17]:</div>
+    Out[16]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2186,7 +2264,7 @@ CountVectorizer(analyzer=u&apos;word&apos;, binary=False, charset=None,
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[17]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">titles</span><span class="p">)</span>
@@ -2202,7 +2280,7 @@ In&nbsp;[21]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[18]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">MultinomialNB</span>
@@ -2216,7 +2294,7 @@ In&nbsp;[22]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[19]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">clf</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
@@ -2231,7 +2309,7 @@ In&nbsp;[23]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[24]:
+In&nbsp;[20]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">upworthy</span><span class="p">)</span>
@@ -2245,7 +2323,7 @@ In&nbsp;[24]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[24]:</div>
+    Out[20]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2266,7 +2344,7 @@ MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[43]:
+In&nbsp;[21]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">y_hat</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -2280,7 +2358,7 @@ In&nbsp;[43]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[44]:
+In&nbsp;[22]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">y_hat</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
@@ -2294,7 +2372,7 @@ In&nbsp;[44]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[44]:</div>
+    Out[22]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2312,14 +2390,14 @@ array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1])
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>How many correctly predicted?</p>
+<p>What % were correctly predicted?</p>
 </div>
     </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[45]:
+In&nbsp;[23]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">upworthy</span><span class="p">)</span>
@@ -2333,7 +2411,7 @@ In&nbsp;[45]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[45]:</div>
+    Out[23]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2348,13 +2426,14 @@ In&nbsp;[45]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
+    </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Better fit statistics</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[42]:
+In&nbsp;[24]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
@@ -2368,7 +2447,7 @@ In&nbsp;[42]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[46]:
+In&nbsp;[25]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">upworthy</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">)</span>
@@ -2382,7 +2461,7 @@ In&nbsp;[46]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[46]:</div>
+    Out[25]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2401,10 +2480,14 @@ array([[416,  84],
     </div></section>
     </section><section>
     <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sociologists care about coeficients, but they are a tucked away.</p>
+</div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[27]:
+In&nbsp;[26]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span>
@@ -2418,7 +2501,7 @@ In&nbsp;[27]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[27]:</div>
+    Out[26]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2434,13 +2517,49 @@ array([[-6.71921442, -6.31374931, -7.81782671, ..., -7.12467953,
 </div>
 
 </div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[27]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+1192
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[28]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2466,44 +2585,18 @@ In&nbsp;[28]:
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[29]:
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I know what we can do.</p>
 </div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt output_prompt">
-    Out[29]:</div>
-<div class="box-flex1 output_subarea output_pyout">
-
-
-<pre>
-1192
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section>
+    </div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[32]:
+In&nbsp;[29]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">coefficients</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">,</span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -2554,91 +2647,14 @@ million -5.51524161805
 </div></section>
     </section><section>
     <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data scientists care about over fitting. We probably should too.</p>
+</div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[49]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">cross_validation</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-</pre></div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[50]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">cross_validation</span><span class="o">.</span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">upworthy</span><span class="p">),</span>  <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt output_prompt">
-    Out[50]:</div>
-<div class="box-flex1 output_subarea output_pyout">
-
-
-<pre>
-array([ 0.81666667,  0.81666667,  0.86666667,  0.79831933,  0.81512605,
-        0.83193277,  0.84033613,  0.79831933,  0.77310924,  0.85714286])
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[52]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">cross_validation</span><span class="o">.</span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">upworthy</span><span class="p">),</span>  <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt output_prompt">
-    Out[52]:</div>
-<div class="box-flex1 output_subarea output_pyout">
-
-
-<pre>
-0.8214285714285714
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section>
-    </section><section>
-    <section>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[54]:
+In&nbsp;[30]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -2649,12 +2665,13 @@ In&nbsp;[54]:
 </div>
 </div>
 
-</div><div class="fragment">
+</div>
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[55]:
+In&nbsp;[31]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -2672,7 +2689,7 @@ In&nbsp;[55]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[56]:
+In&nbsp;[32]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
@@ -2691,19 +2708,19 @@ In&nbsp;[56]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-classification accuracy: 0.917365269461
+classification accuracy: 0.918562874251
 
 </pre>
 </div>
 </div>
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[56]:</div>
+    Out[32]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
-array([[289,  61],
+array([[290,  60],
        [  8, 477]])
 </pre>
 
@@ -2718,7 +2735,7 @@ array([[289,  61],
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[57]:
+In&nbsp;[33]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -2737,20 +2754,20 @@ In&nbsp;[57]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-classification accuracy: 0.840782122905
+classification accuracy: 0.821229050279
 
 </pre>
 </div>
 </div>
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[57]:</div>
+    Out[33]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
 array([[107,  43],
-       [ 14, 194]])
+       [ 21, 187]])
 </pre>
 
 </div>
@@ -2760,19 +2777,17 @@ array([[107,  43],
 </div>
 
 </div>
-    </div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>What about a new headline?</p>
-</div></section>
+    </div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[67]:
+In&nbsp;[34]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">soc_title</span> <span class="o">=</span> <span class="s">&#39;Educational Assortative Mating and Earnings Inequality in the United States&#39;</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">cross_validation</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 </pre></div>
 
 </div>
@@ -2783,7 +2798,101 @@ In&nbsp;[67]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[68]:
+In&nbsp;[35]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">cross_validation</span><span class="o">.</span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">upworthy</span><span class="p">),</span>  <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[35]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([ 0.81666667,  0.81666667,  0.86666667,  0.79831933,  0.81512605,
+        0.83193277,  0.84033613,  0.79831933,  0.77310924,  0.85714286])
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[36]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">cross_validation</span><span class="o">.</span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">upworthy</span><span class="p">),</span>  <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[36]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+0.8214285714285714
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Do we do any better by looking at bigrams? Go back up and change the values for CountVectorizer.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What about a new headline?</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[37]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">soc_title</span> <span class="o">=</span> <span class="s">&#39;Educational Assortative Mating and Earnings Inequality in the United States&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[38]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">soc_title_vector</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">([</span><span class="n">soc_title</span><span class="p">])</span>
@@ -2798,7 +2907,7 @@ In&nbsp;[68]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[69]:
+In&nbsp;[39]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">soc_title_vector</span><span class="p">)</span>
@@ -2812,7 +2921,7 @@ In&nbsp;[69]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[69]:</div>
+    Out[39]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2832,7 +2941,7 @@ array([0])
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[70]:
+In&nbsp;[40]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">gawker_title</span> <span class="o">=</span> <span class="s">&#39;Shocking Footage Aired of Police Shooting Face-Eating Nude Man&#39;</span>
@@ -2848,7 +2957,7 @@ In&nbsp;[70]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[70]:</div>
+    Out[40]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -2873,14 +2982,15 @@ array([1])
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Make a prediction for:</p>
+<p>Make a prediction for this out of sample abstract:</p>
 <p>This article investigates how changes in educational assortative mating affected the growth in earnings inequality among households in the United States between the late 1970s and early 2000s. The authors find that these changes had a small, negative effect on inequality: there would have been more inequality in earnings in the early 2000s if educational assortative mating patterns had remained as they were in the 1970s. Given the educational distribution of men and women in the United States, educational assortative mating can have only a weak impact on inequality, and educational sorting among partners is a poor proxy for sorting on earnings.</p>
 </div>
-    </div>
+    </div><div style=display:none>
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[40]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre>
@@ -2889,7 +2999,8 @@ In&nbsp;[]:
 </div>
 </div>
 
-</div></section>
+</div>
+    </div></section>
     </section>
 </div>
 </div>

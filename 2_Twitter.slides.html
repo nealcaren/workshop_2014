@@ -1806,10 +1806,55 @@ In&nbsp;[4]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c"># Keys for authenticating Python</span>
+<span class="n">consumer_key</span>        <span class="o">=</span> <span class="s">&#39;vIdNIV4AYVW0E47ipzUeg&#39;</span>
+<span class="n">consumer_secret</span>     <span class="o">=</span> <span class="s">&#39;IY1Nzu13fN3ki0QVx8wbdnlwMql20WnGWvy7fjZY0&#39;</span>
+<span class="n">access_token</span>        <span class="o">=</span> <span class="s">&#39;730945789-j2Ju2nnZoxHBXUPcZaUb0orLtj7WTSHAJvirvQDd&#39;</span>
+<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s">&#39;SKU4jKEiYeoR4Twxm7vQlYvTk3Rpv45i7li3vWBo&#39;</span>
+
+<span class="c"># Highest observed Twitter account number</span>
+<span class="n">max_id</span> <span class="o">=</span> <span class="mi">2327203915</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
 In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">make_random_id_numbers</span><span class="p">(</span><span class="n">list_size</span><span class="p">):</span>
+    <span class="n">random_integers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">max_id</span><span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">list_size</span><span class="p">)]</span>
+    <span class="n">random_integers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">random_integers</span><span class="p">]</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">numbers</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">make_random_id_numbers</span><span class="p">(</span><span class="n">list_size</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Returns a random list of size list_size of possible twitter ids.</span>
+<span class="sd">    IDs cound range from 0 to max_id size</span>
+<span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">random_integers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">max_id</span><span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">list_size</span><span class="p">)]</span>
     <span class="n">random_integers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">random_integers</span><span class="p">]</span>
     <span class="n">numbers</span> <span class="o">=</span> <span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random_integers</span><span class="p">)</span>
@@ -2596,6 +2641,9 @@ kQAAAABJRU5ErkJggg==
 </div>
 </div>
 
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Should we go back and see you many people have Tweeted in February? Or weekly usage?</p>
 </div></section>
     </section>
 </div>
